@@ -1,32 +1,26 @@
 package visao;
 
 import java.awt.EventQueue;
-import java.awt.Image;
-
 import javax.swing.JFrame;
-import javax.swing.JMenuBar;
-import javax.swing.JButton;
-import java.awt.BorderLayout;
 import javax.swing.JLabel;
-import javax.swing.JTable;
-import javax.swing.JPanel;
-import javax.swing.JSplitPane;
-import java.awt.TextArea;
-import java.awt.Component;
-import javax.swing.Box;
 import javax.swing.ImageIcon;
-import dao.acesso;
+import javax.swing.JButton;
+import java.awt.Color;
 import javax.swing.JTextField;
-import javax.swing.JPasswordField;
+import java.awt.Font;
+import java.awt.SystemColor;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.Color;
+import dao.*;
+import negocio.*;
+import java.util.*;
+import java.sql.*;
 
 public class main {
 
-	private JFrame frmUniforonlinePara;
-	private JTextField txtLogin;
-	private JPasswordField txtSenha;
+	private JFrame frmUniforMobile;
+	private JTextField inserirUsuario;
+	private JTextField inserirSenha;
 
 	/**
 	 * Launch the application.
@@ -36,7 +30,7 @@ public class main {
 			public void run() {
 				try {
 					main window = new main();
-					window.frmUniforonlinePara.setVisible(true);
+					window.frmUniforMobile.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -55,76 +49,60 @@ public class main {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frmUniforonlinePara = new JFrame();
-		frmUniforonlinePara.setTitle("UniforOnline - Para desktops | Powered By Matheus Maai");
-		frmUniforonlinePara.getContentPane().setBackground(Color.WHITE);
-		frmUniforonlinePara.setBounds(100, 100, 370, 469);
-		frmUniforonlinePara.setResizable(false);
-		frmUniforonlinePara.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmUniforonlinePara.getContentPane().setLayout(null);
+		frmUniforMobile = new JFrame();
+		frmUniforMobile.setTitle("UNIFOR - FERRAMENTA DE GEST\u00C3O");
+		frmUniforMobile.setResizable(false);
+		frmUniforMobile.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 10));
+		frmUniforMobile.getContentPane().setBackground(Color.WHITE);
+		frmUniforMobile.setBounds(100, 100, 373, 499);
+		frmUniforMobile.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmUniforMobile.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Usuário:");
-		lblNewLabel.setBounds(46, 280, 65, 14);
-		frmUniforonlinePara.getContentPane().add(lblNewLabel);
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon(main.class.getResource("/img/UNIFOR_Logo_21.gif")));
+		lblNewLabel.setBounds(10, 22, 351, 248);
+		frmUniforMobile.getContentPane().add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Senha:");
-		lblNewLabel_1.setBounds(46, 305, 65, 14);
-		frmUniforonlinePara.getContentPane().add(lblNewLabel_1);
+		JLabel lblNewLabel_1 = new JLabel("Usu\u00E1rio");
+		lblNewLabel_1.setBounds(89, 281, 46, 14);
+		frmUniforMobile.getContentPane().add(lblNewLabel_1);
 		
-		txtLogin = new JTextField();
-		txtLogin.setBounds(109, 277, 201, 20);
-		frmUniforonlinePara.getContentPane().add(txtLogin);
-		txtLogin.setColumns(10);
+		JLabel lblNewLabel_2 = new JLabel("Senha");
+		lblNewLabel_2.setBounds(89, 311, 46, 14);
+		frmUniforMobile.getContentPane().add(lblNewLabel_2);
 		
-		txtSenha = new JPasswordField();
-		txtSenha.setBounds(109, 305, 201, 20);
-		frmUniforonlinePara.getContentPane().add(txtSenha);
-		
-		JButton btnEntrar = new JButton("Acessar");
+		JButton btnEntrar = new JButton("ENTRAR");
 		btnEntrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-				acesso cl = new acesso();
-				cl.Acesso(txtLogin.getText(), txtSenha.getText());
-				
-				if(cl.acesso == true){
-					telaInicio tl = new telaInicio();
-					tl.show();
-					new telaInicio();
-					tl.setExtendedState(telaInicio.MAXIMIZED_BOTH);
-					dispose();
-				}
-				
-				if (cl.acesso==false){
-					txtLogin.setText("");
-					txtSenha.setText("");
-					txtLogin.requestFocus();
-				}
-				
-				cl.acesso = false;
-			}
-
-			private void dispose() {
-				// TODO Auto-generated method stub
-				
+			public void actionPerformed(ActionEvent e) {
+							
 			}
 		});
-		btnEntrar.setBounds(46, 333, 135, 38);
-		frmUniforonlinePara.getContentPane().add(btnEntrar);
+		btnEntrar.setBounds(73, 341, 109, 31);
+		frmUniforMobile.getContentPane().add(btnEntrar);
 		
-		JButton btnCancelar = new JButton("Fechar");
-		btnCancelar.addActionListener(new ActionListener() {
+		JButton btnSair = new JButton("SAIR");
+		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
 				System.exit(0);
 			}
 		});
-		btnCancelar.setBounds(181, 333, 129, 38);
-		frmUniforonlinePara.getContentPane().add(btnCancelar);
+		btnSair.setBounds(187, 341, 109, 31);
+		frmUniforMobile.getContentPane().add(btnSair);
 		
-		JLabel logo = new JLabel("");
-		logo.setIcon(new ImageIcon(main.class.getResource("/img/UNIFOR_Logo_21.gif")));
-		logo.setBounds(10, 53, 334, 197);	
-		frmUniforonlinePara.getContentPane().add(logo);
+		inserirUsuario = new JTextField();
+		inserirUsuario.setBounds(138, 277, 158, 23);
+		frmUniforMobile.getContentPane().add(inserirUsuario);
+		inserirUsuario.setColumns(10);
+		
+		inserirSenha = new JTextField();
+		inserirSenha.setBounds(138, 307, 158, 23);
+		frmUniforMobile.getContentPane().add(inserirSenha);
+		inserirSenha.setColumns(10);
+		
+		JLabel lblNewLabel_3 = new JLabel("VERS\u00C3O DO SISTEMA 1.0.0.1 BUILDER 2015");
+		lblNewLabel_3.setForeground(SystemColor.controlShadow);
+		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 10));
+		lblNewLabel_3.setBounds(73, 445, 230, 14);
+		frmUniforMobile.getContentPane().add(lblNewLabel_3);
 	}
 }
