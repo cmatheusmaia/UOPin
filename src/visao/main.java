@@ -25,7 +25,7 @@ public class main {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -74,7 +74,6 @@ public class main {
 		JButton btnEntrar = new JButton("ENTRAR");
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-							
 			}
 		});
 		btnEntrar.setBounds(73, 341, 109, 31);
@@ -83,7 +82,7 @@ public class main {
 		JButton btnSair = new JButton("SAIR");
 		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				System.exit(0);
+				
 			}
 		});
 		btnSair.setBounds(187, 341, 109, 31);

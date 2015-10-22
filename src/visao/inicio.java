@@ -1,11 +1,12 @@
-package negocio;
+package visao;
 
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
-public class mainNegocio {
+public class inicio {
 
+	protected static final String MAXIMIZED_BOTH = null;
 	private JFrame frame;
 
 	/**
@@ -15,7 +16,7 @@ public class mainNegocio {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					mainNegocio window = new mainNegocio();
+					inicio window = new inicio();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -27,7 +28,7 @@ public class mainNegocio {
 	/**
 	 * Create the application.
 	 */
-	public mainNegocio() {
+	public inicio() {
 		initialize();
 	}
 
@@ -38,6 +39,16 @@ public class mainNegocio {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+	public void show() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setExtendedState(String maximized_BOTH2) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
