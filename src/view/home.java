@@ -38,9 +38,13 @@ public class home {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 761, 501);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(59, 98, 89, 23);
+		frame.getContentPane().add(btnNewButton);
 	}
 
 	public void setExtendedState(String maximized_BOTH2) {
