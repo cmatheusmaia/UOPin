@@ -43,7 +43,7 @@ public class home {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(59, 98, 89, 23);
+		btnNewButton.setBounds(96, 318, 548, 100);
 		frame.getContentPane().add(btnNewButton);
 	}
 
