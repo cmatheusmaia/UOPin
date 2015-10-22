@@ -1,6 +1,7 @@
 package negocio;
 
 import javax.swing.JOptionPane;
+import dao.*;
 
 public class main {
 
@@ -9,5 +10,10 @@ public class main {
 		System.exit(0);
 		
 	}
+	
+	public static void entrar(String[] args) {
+		acesso ac = new acesso();
+			ac.Acesso(null, null);
+		}
 }
 	
