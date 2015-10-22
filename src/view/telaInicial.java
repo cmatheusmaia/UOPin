@@ -16,8 +16,8 @@ import java.awt.event.ActionEvent;
 public class telaInicial {
 
 	private JFrame frmUniforFerramenta;
-	private JTextField textField;
-	private JPasswordField passwordField;
+	private JTextField txtUsuario;
+	private JPasswordField txtSenha;
 
 	/**
 	 * Launch the application.
@@ -63,14 +63,14 @@ public class telaInicial {
 		lblSenha.setBounds(78, 323, 56, 14);
 		frmUniforFerramenta.getContentPane().add(lblSenha);
 		
-		textField = new JTextField();
-		textField.setBounds(132, 295, 135, 20);
-		frmUniforFerramenta.getContentPane().add(textField);
-		textField.setColumns(10);
+		txtUsuario = new JTextField();
+		txtUsuario.setBounds(132, 295, 135, 20);
+		frmUniforFerramenta.getContentPane().add(txtUsuario);
+		txtUsuario.setColumns(10);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(131, 320, 136, 20);
-		frmUniforFerramenta.getContentPane().add(passwordField);
+		txtSenha = new JPasswordField();
+		txtSenha.setBounds(131, 320, 136, 20);
+		frmUniforFerramenta.getContentPane().add(txtSenha);
 		
 		JButton btnNewButton = new JButton("ENTRAR");
 		btnNewButton.addActionListener(new ActionListener() {

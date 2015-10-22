@@ -22,7 +22,6 @@ public class acesso {
 			controleAcesso = DriverManager.getConnection("jdbc:mysql://localhost/uniformobile","root","101191");
 			consulta = (Statement) controleAcesso.createStatement();
 			tabela = consulta.executeQuery("select login, senha from usuario where login='"+login+"'and senha='"+senha+"'");
-			
 			if (tabela.next()){
 				JOptionPane.showMessageDialog(null, "Acesso autorizado");
 				acesso=true;
