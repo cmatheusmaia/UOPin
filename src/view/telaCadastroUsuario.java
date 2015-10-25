@@ -51,7 +51,7 @@ public class telaCadastroUsuario extends JFrame {
      */
     public telaCadastroUsuario() {
     	setResizable(false);
-    	setTitle("CADASTRO DE USUARIO - 1.0.1");
+    	setTitle("CADASTRO DE USUARIO - 1.0.2");
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	setBounds(100, 100, 700, 500);
 	
