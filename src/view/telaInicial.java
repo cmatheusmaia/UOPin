@@ -12,6 +12,7 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 public class telaInicial {
 
@@ -47,6 +48,8 @@ public class telaInicial {
 	 */
 	private void initialize() {
 		frmUniforFerramenta = new JFrame();
+		frmUniforFerramenta.setResizable(false);
+		frmUniforFerramenta.setIconImage(Toolkit.getDefaultToolkit().getImage(telaInicial.class.getResource("/img/unifor_logo.png")));
 		frmUniforFerramenta.getContentPane().setBackground(SystemColor.textHighlightText);
 		frmUniforFerramenta.getContentPane().setLayout(null);
 		
@@ -93,7 +96,7 @@ public class telaInicial {
 		JLabel lblUniforcMobile = new JLabel("UNFOR MOBILE. VERS\u00C3O 1.0.1 BUILDER 2015");
 		lblUniforcMobile.setForeground(SystemColor.controlShadow);
 		lblUniforcMobile.setFont(new Font("Arial", Font.PLAIN, 8));
-		lblUniforcMobile.setBounds(92, 440, 175, 14);
+		lblUniforcMobile.setBounds(92, 435, 175, 14);
 		frmUniforFerramenta.getContentPane().add(lblUniforcMobile);
 		frmUniforFerramenta.setBackground(SystemColor.textHighlightText);
 		frmUniforFerramenta.setTitle("UNIFOR - FERRAMENTA DE GEST\u00C3O");

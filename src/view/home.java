@@ -12,6 +12,7 @@ import javax.swing.JMenuItem;
 import java.awt.Font;
 import javax.swing.JLabel;
 import java.awt.SystemColor;
+import java.awt.Toolkit;
 
 public class home {
 
@@ -46,8 +47,9 @@ public class home {
 	 */
 	private void initialize() {
 		frmUnfiorFerramenta = new JFrame();
-		frmUnfiorFerramenta.setTitle("UNFIOR - FERRAMENTA DE GEST\u00C3O - 1.0.1");
 		frmUnfiorFerramenta.setResizable(false);
+		frmUnfiorFerramenta.setIconImage(Toolkit.getDefaultToolkit().getImage(home.class.getResource("/img/unifor_logo.png")));
+		frmUnfiorFerramenta.setTitle("UNIFOR - FERRAMENTA DE GEST\u00C3O - 1.0.1");
 		frmUnfiorFerramenta.getContentPane().setBackground(Color.WHITE);
 		frmUnfiorFerramenta.setBounds(100, 100, 761, 501);
 		frmUnfiorFerramenta.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

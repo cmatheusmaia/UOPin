@@ -19,6 +19,8 @@ import javax.swing.JRadioButton;
 import java.awt.Font;
 import java.awt.SystemColor;
 import javax.swing.JButton;
+import java.awt.Toolkit;
+import javax.swing.SwingConstants;
 
 public class telaCadastroUsuario extends JFrame {
 
@@ -50,6 +52,7 @@ public class telaCadastroUsuario extends JFrame {
      * Create the frame.
      */
     public telaCadastroUsuario() {
+    	setIconImage(Toolkit.getDefaultToolkit().getImage(telaCadastroUsuario.class.getResource("/img/unifor_logo.png")));
     	setResizable(false);
     	setTitle("CADASTRO DE USUARIO - 1.0.2");
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
