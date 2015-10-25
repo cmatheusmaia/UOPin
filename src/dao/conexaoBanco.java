@@ -1,5 +1,7 @@
 package dao;
 import java.sql.*;
+
+import com.mysql.jdbc.Statement;
 public class conexaoBanco {
 	
 	public static Connection getConnection(){
@@ -12,6 +14,16 @@ public class conexaoBanco {
 			connection = null;
 		}
 		return connection;
+	}
+
+	public void abrirBDConn() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static Statement createStatement() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
