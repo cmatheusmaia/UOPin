@@ -14,6 +14,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.ImageIcon;
+import java.awt.Toolkit;
 
 public class telaVersao extends JFrame {
 
@@ -39,6 +40,7 @@ public class telaVersao extends JFrame {
 	 * Create the frame.
 	 */
 	public telaVersao() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(telaVersao.class.getResource("/img/unifor_logo.png")));
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 700, 500);
