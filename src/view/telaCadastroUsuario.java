@@ -156,28 +156,28 @@ public class telaCadastroUsuario extends JFrame {
 	contentPane.add(lblNewLabel_7);
 	
 	textField_5 = new JTextField();
-	textField_5.setBounds(32, 252, 420, 43);
+	textField_5.setBounds(32, 252, 627, 75);
 	contentPane.add(textField_5);
 	textField_5.setColumns(10);
 	
 	JLabel lblNewLabel_8 = new JLabel("* Campos obrigat\u00F3rios");
 	lblNewLabel_8.setForeground(SystemColor.controlShadow);
 	lblNewLabel_8.setFont(new Font("Arial", Font.PLAIN, 10));
-	lblNewLabel_8.setBounds(17, 377, 237, 23);
+	lblNewLabel_8.setBounds(42, 333, 237, 23);
 	contentPane.add(lblNewLabel_8);
 	
 	JLabel lblNewLabel_9 = new JLabel("VERS\u00C3O DO SISTEMA 1.0.1 - BUILDER 2015");
 	lblNewLabel_9.setForeground(SystemColor.controlShadow);
 	lblNewLabel_9.setFont(new Font("Arial", Font.PLAIN, 10));
-	lblNewLabel_9.setBounds(222, 396, 231, 23);
+	lblNewLabel_9.setBounds(222, 422, 231, 23);
 	contentPane.add(lblNewLabel_9);
 	
 	JButton btnNewButton = new JButton("Cadastrar");
-	btnNewButton.setBounds(179, 333, 131, 31);
+	btnNewButton.setBounds(179, 367, 131, 31);
 	contentPane.add(btnNewButton);
 	
 	JButton btnNewButton_1 = new JButton("Limpar");
-	btnNewButton_1.setBounds(359, 333, 131, 31);
+	btnNewButton_1.setBounds(359, 367, 131, 31);
 	contentPane.add(btnNewButton_1);
     }
 }
