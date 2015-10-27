@@ -14,9 +14,9 @@ import javax.swing.JLabel;
 import java.awt.SystemColor;
 import java.awt.Toolkit;
 
-public class home {
+public class home extends JFrame{
 
-	public static final String MAXIMIZED_BOTH = null;
+
 	private JFrame frmUnfiorFerramenta;
 
 	/**
@@ -45,7 +45,7 @@ public class home {
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	public void initialize() {
 		frmUnfiorFerramenta = new JFrame();
 		frmUnfiorFerramenta.setResizable(false);
 		frmUnfiorFerramenta.setIconImage(Toolkit.getDefaultToolkit().getImage(home.class.getResource("/img/unifor_logo.png")));
@@ -180,13 +180,15 @@ public class home {
 		mnNewMenu_3.add(mntmVerso);
 	}
 
-	public void setExtendedState(String maximized_BOTH2) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	public void show() {
-		// TODO Auto-generated method stub
-		
-	}
+//	public void setExtendedState(String maximized_BOTH2) {
+//		// TODO Auto-generated method stub
+//		
+//	}
+//
+//	public void show() {
+//	    // TODO Auto-generated method stub
+//	    
+//	}
+
 }
