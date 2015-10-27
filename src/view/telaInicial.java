@@ -17,7 +17,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
 
-public class telaInicial{
+public class telaInicial extends JFrame{
 
     	protected JFrame frmUniforFerramenta;
 	protected static JTextField txtUsuario;
