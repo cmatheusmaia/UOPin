@@ -7,6 +7,9 @@ import java.awt.SystemColor;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
+
+import negocio.managerInicial;
+
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.Font;
@@ -14,11 +17,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
 
-public class telaInicial {
+public class telaInicial{
 
-	private JFrame frmUniforFerramenta;
-	private JTextField txtUsuario;
-	private JPasswordField txtSenha;
+    	protected JFrame frmUniforFerramenta;
+	protected static JTextField txtUsuario;
+	protected static JPasswordField txtSenha;
 
 	/**
 	 * Launch the application.
@@ -78,7 +81,7 @@ public class telaInicial {
 		JButton btnNewButton = new JButton("ENTRAR");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				negocio.main.entrar(null);
+				negocio.managerInicial.entrar(null);
 			}
 		});
 		btnNewButton.setBounds(82, 351, 89, 32);
@@ -87,7 +90,7 @@ public class telaInicial {
 		JButton btnNewButton_1 = new JButton("SAIR");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				negocio.main.sair(null);
+			    negocio.managerInicial.sair(null);
 			}
 		});
 		btnNewButton_1.setBounds(178, 351, 89, 32);
