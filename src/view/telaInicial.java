@@ -51,6 +51,7 @@ public class telaInicial{
 	 */
 	private void initialize() {
 		frmUniforFerramenta = new JFrame();
+		frmUniforFerramenta.setVisible(true);
 		frmUniforFerramenta.setResizable(false);
 		frmUniforFerramenta.setIconImage(Toolkit.getDefaultToolkit().getImage(telaInicial.class.getResource("/img/unifor_logo.png")));
 		frmUniforFerramenta.getContentPane().setBackground(SystemColor.textHighlightText);
@@ -81,7 +82,7 @@ public class telaInicial{
 		JButton btnNewButton = new JButton("ENTRAR");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				negocio.managerInicial.entrar(null);
+			    negocio.managerInicial.entrar(null);
 			}
 		});
 		btnNewButton.setBounds(82, 351, 89, 32);
