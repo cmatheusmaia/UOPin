@@ -15,6 +15,8 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import java.awt.SystemColor;
 import java.awt.Toolkit;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class home{
 
@@ -78,6 +80,11 @@ public class home{
 	menuBar.add(mnNewMenu);
 
 	JMenuItem mntmSair = new JMenuItem("Sair");
+	mntmSair.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent arg0) {
+			negocio.sairdoSistema.sair();
+		}
+	});
 	mntmSair.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmSair.setIcon(new ImageIcon(home.class.getResource("/img/Exit.png")));
 	mnNewMenu.add(mntmSair);
@@ -93,6 +100,11 @@ public class home{
 	mnNewMenu_1.add(mnEstabelecimento);
 
 	JMenuItem mntmAdicionar_1 = new JMenuItem("Adicionar");
+	mntmAdicionar_1.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			negocio.managerCadastrarEvento.chamarRotina(null);
+		}
+	});
 	mntmAdicionar_1.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmAdicionar_1.setIcon(new ImageIcon(home.class.getResource("/img/Create.png")));
 	mnEstabelecimento.add(mntmAdicionar_1);
