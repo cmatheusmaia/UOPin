@@ -27,9 +27,9 @@ public class managerInicial extends telaInicial {
 
     }
 
-    public static void sair(String[] args) {
-	JOptionPane.showMessageDialog(null, "O sistema será encerrado");
-	System.exit(0);
-    }
+//    public static void sair(String[] args) {
+//	JOptionPane.showMessageDialog(null, "O sistema será encerrado");
+//	System.exit(0);
+//    }
 
 }

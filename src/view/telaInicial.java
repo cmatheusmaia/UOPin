@@ -91,7 +91,8 @@ public class telaInicial{
 		JButton btnNewButton_1 = new JButton("SAIR");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-			    negocio.managerInicial.sair(null);
+			    //negocio.managerInicial.sair(null);
+			    negocio.sairdoSistema.sair();
 			}
 		});
 		btnNewButton_1.setBounds(178, 351, 89, 32);
