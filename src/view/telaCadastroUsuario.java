@@ -51,6 +51,7 @@ public class telaCadastroUsuario extends JFrame {
     /**
      * Create the frame.
      */
+    
     public telaCadastroUsuario() {
     	setIconImage(Toolkit.getDefaultToolkit().getImage(telaCadastroUsuario.class.getResource("/img/unifor_logo.png")));
     	setResizable(false);
