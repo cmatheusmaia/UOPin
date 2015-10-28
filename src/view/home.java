@@ -100,11 +100,6 @@ public class home{
 	mnNewMenu_1.add(mnEstabelecimento);
 
 	JMenuItem mntmAdicionar_1 = new JMenuItem("Adicionar");
-	mntmAdicionar_1.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			negocio.managerCadastrarEvento.chamarRotina(null);
-		}
-	});
 	mntmAdicionar_1.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmAdicionar_1.setIcon(new ImageIcon(home.class.getResource("/img/Create.png")));
 	mnEstabelecimento.add(mntmAdicionar_1);
@@ -125,6 +120,11 @@ public class home{
 	mnNewMenu_1.add(mnEvento);
 
 	JMenuItem mntmAdcionar = new JMenuItem("Adcionar");
+	mntmAdcionar.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+		    negocio.managerCadastrarEvento.chamarRotina(null);
+		}
+	});
 	mntmAdcionar.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmAdcionar.setIcon(new ImageIcon(home.class.getResource("/img/Create.png")));
 	mnEvento.add(mntmAdcionar);
