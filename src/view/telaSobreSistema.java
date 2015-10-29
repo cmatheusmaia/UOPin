@@ -39,6 +39,8 @@ public class telaSobreSistema extends JFrame {
 	 * Create the frame.
 	 */
 	public telaSobreSistema() {
+		setVisible(true);
+		setResizable(false);
 		setTitle("SOBRE O SISTEMA - 1.0.1");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 700, 500);

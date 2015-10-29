@@ -6,6 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.SystemColor;
 
 public class telaEditarEvento extends JFrame {
 
@@ -31,12 +35,22 @@ public class telaEditarEvento extends JFrame {
 	 * Create the frame.
 	 */
 	public telaEditarEvento() {
+		setTitle("EDITAR EVENTO - 1.0.1");
+		setVisible(true);
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 700, 500);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel label = new JLabel("VERS\u00C3O DO SISTEMA 1.0.1 - BUILDER 2015");
+		label.setForeground(SystemColor.controlShadow);
+		label.setFont(new Font("Arial", Font.PLAIN, 10));
+		label.setBounds(231, 437, 231, 23);
+		contentPane.add(label);
 	}
 
 }

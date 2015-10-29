@@ -16,6 +16,7 @@ import dao.InseriEstabelecimento;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class CadastroDeEstabelecimento extends JFrame {
 
@@ -55,10 +56,13 @@ public class CadastroDeEstabelecimento extends JFrame {
 	 * Create the frame.
 	 */
 	public CadastroDeEstabelecimento() {
-		setTitle("ESTABELECIMENTO");
+		setVisible(true);
+		setResizable(false);
+		setTitle("ESTABELECIMENTO - 1.0.1");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 488, 349);
+		setBounds(100, 100, 700, 500);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);

@@ -15,6 +15,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;
+import java.awt.SystemColor;
 
 public class telaVersao extends JFrame {
 
@@ -40,7 +41,9 @@ public class telaVersao extends JFrame {
 	 * Create the frame.
 	 */
 	public telaVersao() {
+		setTitle("VERS\u00C3O DO SISTEMA - 1.0.1");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(telaVersao.class.getResource("/img/unifor_logo.png")));
+		setVisible(true);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 700, 500);
@@ -84,5 +87,11 @@ public class telaVersao extends JFrame {
 		label.setFont(new Font("Arial", Font.PLAIN, 11));
 		label.setBounds(10, 109, 492, 14);
 		contentPane.add(label);
+		
+		JLabel label_1 = new JLabel("UNFOR MOBILE. VERS\u00C3O 1.0.1 BUILDER 2015");
+		label_1.setForeground(SystemColor.controlShadow);
+		label_1.setFont(new Font("Arial", Font.PLAIN, 8));
+		label_1.setBounds(257, 425, 175, 14);
+		contentPane.add(label_1);
 	}
 }
