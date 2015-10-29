@@ -9,7 +9,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 
 import negocio.managerInicial;
-import negocio.sairdoSistema;
 
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
@@ -95,7 +94,7 @@ public class telaInicial {
 	JButton btnNewButton_1 = new JButton("SAIR");
 	btnNewButton_1.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent arg0) {
-		sairdoSistema.sair();
+		negocio.managerSairDoSistema.sair();
 	    }
 	});
 	btnNewButton_1.setBounds(178, 351, 89, 32);

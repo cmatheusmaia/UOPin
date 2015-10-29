@@ -14,9 +14,6 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.SoftBevelBorder;
 
 import negocio.ChamarTelas;
-import negocio.managerCadastrarEvento;
-import negocio.sairdoSistema;
-
 import java.awt.Font;
 import javax.swing.JLabel;
 import java.awt.SystemColor;
@@ -88,11 +85,11 @@ public class home{
 	JMenuItem mntmSair = new JMenuItem("Sair");
 	mntmSair.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
-<<<<<<< HEAD
-			negocio.sairdoSistema.sair();
-=======
-			sairdoSistema.sair();
->>>>>>> branch 'master' of https://github.com/cmatheusmaia/UOPin.git
+
+			// negocio.sairdoSistema.sair();
+			// sairdoSistema.sair();
+			
+			negocio.managerSairDoSistema.sair();
 		}
 	});
 	mntmSair.setFont(new Font("Arial", Font.PLAIN, 12));
