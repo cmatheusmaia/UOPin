@@ -10,6 +10,9 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.SystemColor;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
 public class telaEditarEvento extends JFrame {
 
@@ -51,6 +54,15 @@ public class telaEditarEvento extends JFrame {
 		label.setFont(new Font("Arial", Font.PLAIN, 10));
 		label.setBounds(231, 437, 231, 23);
 		contentPane.add(label);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 694, 21);
+		contentPane.add(menuBar);
+		
+		JMenu menu = new JMenu("Ajuda");
+		menuBar.add(menu);
+		
+		JMenuItem menuItem = new JMenuItem("O que mudou?");
+		menu.add(menuItem);
 	}
-
 }
