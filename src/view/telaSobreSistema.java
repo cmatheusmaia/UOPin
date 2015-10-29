@@ -40,7 +40,7 @@ public class telaSobreSistema extends JFrame {
 	 */
 	public telaSobreSistema() {
 		setTitle("SOBRE O SISTEMA - 1.0.1");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 700, 500);
 		
 		JMenuBar menuBar = new JMenuBar();

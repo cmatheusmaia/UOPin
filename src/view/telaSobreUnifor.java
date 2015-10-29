@@ -38,7 +38,7 @@ public class telaSobreUnifor extends JFrame {
 	public telaSobreUnifor() {
 		setTitle("UNIFOR ONLINE - 1.0.1");
 		setResizable(false);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 700, 500);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
