@@ -7,8 +7,9 @@ public class managerSairDoSistema {
 	public static void sair() {
 		
 		int selectedOption = JOptionPane.showConfirmDialog(null, "Deseja realmente sair?",
-				"O sistema será encerrado", JOptionPane.YES_NO_OPTION, JOptionPane.NO_OPTION);    
-	    		if(selectedOption == JOptionPane.YES_OPTION){  
+				"", JOptionPane.YES_NO_OPTION, JOptionPane.NO_OPTION);    
+	    		if(selectedOption == JOptionPane.YES_OPTION){
+	    			JOptionPane.showMessageDialog(null, "O sistema será encerrado");
 	        System.exit(0); 
 	        }else{
 	        	
