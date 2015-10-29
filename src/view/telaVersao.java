@@ -25,16 +25,16 @@ public class telaVersao extends JFrame {
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					telaVersao frame = new telaVersao();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+		    public void run() {
+			try {
+			    telaCadastroEvento frame = new telaCadastroEvento();
+			    frame.setVisible(true);
+			} catch (Exception e) {
+			    e.printStackTrace();
 			}
+		    }
 		});
-	}
+	    }
 
 	/**
 	 * Create the frame.
