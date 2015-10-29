@@ -54,9 +54,10 @@ public class telaCadastroUsuario extends JFrame {
     
     public telaCadastroUsuario() {
     	setIconImage(Toolkit.getDefaultToolkit().getImage(telaCadastroUsuario.class.getResource("/img/unifor_logo.png")));
+    	setVisible(true);
     	setResizable(false);
     	setTitle("CADASTRO DE USUARIO - 1.0.2");
-	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	setBounds(100, 100, 700, 500);
 	
 	JMenuBar menuBar = new JMenuBar();

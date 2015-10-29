@@ -10,6 +10,12 @@ import javax.swing.JMenu;
 import javax.swing.ImageIcon;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.SoftBevelBorder;
+
+import negocio.ChamarTelas;
+import negocio.managerCadastrarEvento;
+import negocio.sairdoSistema;
 
 import java.awt.Font;
 import javax.swing.JLabel;
@@ -56,7 +62,7 @@ public class home{
 	frmUnfiorFerramenta.setIconImage(Toolkit.getDefaultToolkit().getImage(home.class.getResource("/img/unifor_logo.png")));
 	frmUnfiorFerramenta.setTitle("UNIFOR - FERRAMENTA DE GEST\u00C3O - 1.0.1");
 	frmUnfiorFerramenta.getContentPane().setBackground(Color.WHITE);
-	frmUnfiorFerramenta.setBounds(100, 100, 761, 501);
+	frmUnfiorFerramenta.setBounds(100, 100, 700, 500);
 	frmUnfiorFerramenta.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	frmUnfiorFerramenta.getContentPane().setLayout(null);
 
@@ -82,7 +88,11 @@ public class home{
 	JMenuItem mntmSair = new JMenuItem("Sair");
 	mntmSair.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
+<<<<<<< HEAD
 			negocio.sairdoSistema.sair();
+=======
+			sairdoSistema.sair();
+>>>>>>> branch 'master' of https://github.com/cmatheusmaia/UOPin.git
 		}
 	});
 	mntmSair.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -125,6 +135,11 @@ public class home{
 	mnNewMenu_1.add(mnEvento);
 
 	JMenuItem mntmAdcionar = new JMenuItem("Adcionar");
+	mntmAdcionar.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+		    ChamarTelas.abrir("CadastrarEvento");
+		}
+	});
 	mntmAdcionar.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmAdcionar.setIcon(new ImageIcon(home.class.getResource("/img/Create.png")));
 	mnEvento.add(mntmAdcionar);
@@ -145,6 +160,11 @@ public class home{
 	mnNewMenu_1.add(mnUsurio);
 
 	JMenuItem mntmAdicionar = new JMenuItem("Adicionar");
+	mntmAdicionar.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+		    ChamarTelas.abrir("CadastrarUsuario");
+		}
+	});
 	mntmAdicionar.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmAdicionar.setIcon(new ImageIcon(home.class.getResource("/img/Create.png")));
 	mnUsurio.add(mntmAdicionar);

@@ -59,9 +59,10 @@ public class telaCadastroEvento extends JFrame {
      */
     public telaCadastroEvento() {
     	setIconImage(Toolkit.getDefaultToolkit().getImage(telaCadastroEvento.class.getResource("/img/unifor_logo.png")));
+    	setVisible(true);
     	setResizable(false);
     	setTitle("CADASTRO DE EVENTO - 1.0.1");
-	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	setBounds(100, 100, 700, 500);
 	
 	JMenuBar menuBar = new JMenuBar();
