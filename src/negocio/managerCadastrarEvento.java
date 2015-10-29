@@ -10,11 +10,8 @@ import view.telaInicial;
 
 public class managerCadastrarEvento {
 
+	//class para intermediar o dao com a view
 	
-	public static void chamarRotina(String[] args) {
-		JOptionPane.showMessageDialog(null, "Iniciando tela");
-		new telaCadastroEvento();
-	}
 }
 
 

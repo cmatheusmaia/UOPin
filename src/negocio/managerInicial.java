@@ -1,15 +1,14 @@
 package negocio;
 
-import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 import dao.acesso;
 import view.home;
-import view.telaInicial;
 
-public class managerInicial extends telaInicial {
+public class managerInicial{
 
-    public static void entrar(String[] args) {
-
+    public static void entrar(JTextField txtUsuario, JPasswordField txtSenha) {
 	acesso cl = new acesso();
 	cl.Acesso(txtUsuario.getText(), txtSenha.getText());
 
@@ -26,10 +25,4 @@ public class managerInicial extends telaInicial {
 	cl.acesso = false;
 
     }
-
-//    public static void sair(String[] args) {
-//	JOptionPane.showMessageDialog(null, "O sistema será encerrado");
-//	System.exit(0);
-//    }
-
 }
