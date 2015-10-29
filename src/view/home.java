@@ -65,13 +65,13 @@ public class home{
 
 	JLabel lblNewLabel = new JLabel("");
 	lblNewLabel.setIcon(new ImageIcon(home.class.getResource("/img/uniforGray.png")));
-	lblNewLabel.setBounds(228, 95, 280, 251);
+	lblNewLabel.setBounds(222, 95, 280, 251);
 	frmUnfiorFerramenta.getContentPane().add(lblNewLabel);
 
 	JLabel label = new JLabel("VERS\u00C3O DO SISTEMA 1.0.1 - BUILDER 2015");
 	label.setForeground(SystemColor.controlShadow);
 	label.setFont(new Font("Arial", Font.PLAIN, 10));
-	label.setBounds(256, 417, 231, 23);
+	label.setBounds(250, 417, 231, 23);
 	frmUnfiorFerramenta.getContentPane().add(label);
 
 	JMenuBar menuBar = new JMenuBar();
@@ -84,11 +84,7 @@ public class home{
 
 	JMenuItem mntmSair = new JMenuItem("Sair");
 	mntmSair.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent arg0) {
-
-			// negocio.sairdoSistema.sair();
-			// sairdoSistema.sair();
-			
+		public void actionPerformed(ActionEvent arg0) {			
 			negocio.managerSairDoSistema.sair();
 		}
 	});
@@ -106,110 +102,166 @@ public class home{
 	mnEstabelecimento.setIcon(new ImageIcon(home.class.getResource("/img/Company.png")));
 	mnNewMenu_1.add(mnEstabelecimento);
 
-	JMenuItem mntmAdicionar_1 = new JMenuItem("Adicionar");
-	mntmAdicionar_1.addActionListener(new ActionListener() {
+	JMenuItem mntmEstabelecimentoAdicionar = new JMenuItem("Adicionar");
+	mntmEstabelecimentoAdicionar.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-			negocio.managerCadastrarEvento.chamarRotina(null);
+			ChamarTelas.abrir("CadastrarEstabelecimento");
 		}
 	});
-	mntmAdicionar_1.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmAdicionar_1.setIcon(new ImageIcon(home.class.getResource("/img/Create.png")));
-	mnEstabelecimento.add(mntmAdicionar_1);
+	mntmEstabelecimentoAdicionar.setFont(new Font("Arial", Font.PLAIN, 12));
+	mntmEstabelecimentoAdicionar.setIcon(new ImageIcon(home.class.getResource("/img/Create.png")));
+	mnEstabelecimento.add(mntmEstabelecimentoAdicionar);
 
-	JMenuItem mntmEditar_2 = new JMenuItem("Editar");
-	mntmEditar_2.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmEditar_2.setIcon(new ImageIcon(home.class.getResource("/img/Redo.png")));
-	mnEstabelecimento.add(mntmEditar_2);
+	JMenuItem mntmEstabelecimentoEditar = new JMenuItem("Editar");
+	mntmEstabelecimentoEditar.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			ChamarTelas.abrir("EditarEstabelecimento");
+			
+		}
+	});
+	mntmEstabelecimentoEditar.setFont(new Font("Arial", Font.PLAIN, 12));
+	mntmEstabelecimentoEditar.setIcon(new ImageIcon(home.class.getResource("/img/Redo.png")));
+	mnEstabelecimento.add(mntmEstabelecimentoEditar);
 
-	JMenuItem mntmExcluir_2 = new JMenuItem("Excluir");
-	mntmExcluir_2.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmExcluir_2.setIcon(new ImageIcon(home.class.getResource("/img/Company.png")));
-	mnEstabelecimento.add(mntmExcluir_2);
+	JMenuItem mntmEstabelecimentoExcluir = new JMenuItem("Excluir");
+	mntmEstabelecimentoExcluir.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			ChamarTelas.abrir("ExcluirEstabelecimento");
+		}
+	});
+	mntmEstabelecimentoExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
+	mntmEstabelecimentoExcluir.setIcon(new ImageIcon(home.class.getResource("/img/Company.png")));
+	mnEstabelecimento.add(mntmEstabelecimentoExcluir);
 
 	JMenu mnEvento = new JMenu("Evento");
 	mnEvento.setFont(new Font("Arial", Font.PLAIN, 12));
 	mnEvento.setIcon(new ImageIcon(home.class.getResource("/img/History.png")));
 	mnNewMenu_1.add(mnEvento);
 
-	JMenuItem mntmAdcionar = new JMenuItem("Adcionar");
-	mntmAdcionar.addActionListener(new ActionListener() {
+	JMenuItem mntmEventoAdcionar = new JMenuItem("Adcionar");
+	mntmEventoAdcionar.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 		    ChamarTelas.abrir("CadastrarEvento");
 		}
 	});
-	mntmAdcionar.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmAdcionar.setIcon(new ImageIcon(home.class.getResource("/img/Create.png")));
-	mnEvento.add(mntmAdcionar);
+	mntmEventoAdcionar.setFont(new Font("Arial", Font.PLAIN, 12));
+	mntmEventoAdcionar.setIcon(new ImageIcon(home.class.getResource("/img/Create.png")));
+	mnEvento.add(mntmEventoAdcionar);
 
-	JMenuItem mntmEditar_1 = new JMenuItem("Editar");
-	mntmEditar_1.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmEditar_1.setIcon(new ImageIcon(home.class.getResource("/img/Redo.png")));
-	mnEvento.add(mntmEditar_1);
+	JMenuItem mntmEventoEditar = new JMenuItem("Editar");
+	mntmEventoEditar.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			ChamarTelas.abrir("EditarEvento");
+		}
+	});
+	mntmEventoEditar.setFont(new Font("Arial", Font.PLAIN, 12));
+	mntmEventoEditar.setIcon(new ImageIcon(home.class.getResource("/img/Redo.png")));
+	mnEvento.add(mntmEventoEditar);
 
-	JMenuItem mntmExcluir_1 = new JMenuItem("Excluir");
-	mntmExcluir_1.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmExcluir_1.setIcon(new ImageIcon(home.class.getResource("/img/Delete.png")));
-	mnEvento.add(mntmExcluir_1);
+	JMenuItem mntmEventoExcluir = new JMenuItem("Excluir");
+	mntmEventoExcluir.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			ChamarTelas.abrir("ExcluirEvento");
+		}
+	});
+	mntmEventoExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
+	mntmEventoExcluir.setIcon(new ImageIcon(home.class.getResource("/img/Delete.png")));
+	mnEvento.add(mntmEventoExcluir);
 
-	JMenu mnUsurio = new JMenu("Usu\u00E1rio");
-	mnUsurio.setFont(new Font("Arial", Font.PLAIN, 12));
-	mnUsurio.setIcon(new ImageIcon(home.class.getResource("/img/People.png")));
-	mnNewMenu_1.add(mnUsurio);
+	JMenu mnUsuario = new JMenu("Usu\u00E1rio");
+	mnUsuario.setFont(new Font("Arial", Font.PLAIN, 12));
+	mnUsuario.setIcon(new ImageIcon(home.class.getResource("/img/People.png")));
+	mnNewMenu_1.add(mnUsuario);
 
-	JMenuItem mntmAdicionar = new JMenuItem("Adicionar");
-	mntmAdicionar.addActionListener(new ActionListener() {
+	JMenuItem mntmUsuarioAdicionar = new JMenuItem("Adicionar");
+	mntmUsuarioAdicionar.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 		    ChamarTelas.abrir("CadastrarUsuario");
 		}
 	});
-	mntmAdicionar.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmAdicionar.setIcon(new ImageIcon(home.class.getResource("/img/Create.png")));
-	mnUsurio.add(mntmAdicionar);
+	mntmUsuarioAdicionar.setFont(new Font("Arial", Font.PLAIN, 12));
+	mntmUsuarioAdicionar.setIcon(new ImageIcon(home.class.getResource("/img/Create.png")));
+	mnUsuario.add(mntmUsuarioAdicionar);
 
-	JMenuItem mntmEditar = new JMenuItem("Editar");
-	mntmEditar.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmEditar.setIcon(new ImageIcon(home.class.getResource("/img/Redo.png")));
-	mnUsurio.add(mntmEditar);
+	JMenuItem mntmUsuarioEditar = new JMenuItem("Editar");
+	mntmUsuarioEditar.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			ChamarTelas.abrir("EditarUsuario");
+		}
+	});
+	mntmUsuarioEditar.setFont(new Font("Arial", Font.PLAIN, 12));
+	mntmUsuarioEditar.setIcon(new ImageIcon(home.class.getResource("/img/Redo.png")));
+	mnUsuario.add(mntmUsuarioEditar);
 
-	JMenuItem mntmExcluir = new JMenuItem("Excluir");
-	mntmExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmExcluir.setIcon(new ImageIcon(home.class.getResource("/img/Delete.png")));
-	mnUsurio.add(mntmExcluir);
+	JMenuItem mntmUsuarioExcluir = new JMenuItem("Excluir");
+	mntmUsuarioExcluir.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			ChamarTelas.abrir("ExcluirUsuario");
+		}
+	});
+	mntmUsuarioExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
+	mntmUsuarioExcluir.setIcon(new ImageIcon(home.class.getResource("/img/Delete.png")));
+	mnUsuario.add(mntmUsuarioExcluir);
 
 	JMenu mnNewMenu_2 = new JMenu("Relat\u00F3rio");
 	mnNewMenu_2.setFont(new Font("Arial", Font.PLAIN, 12));
 	mnNewMenu_2.setIcon(new ImageIcon(home.class.getResource("/img/Text_preview.png")));
 	menuBar.add(mnNewMenu_2);
 
-	JMenuItem mntmNewMenuItem = new JMenuItem("\u00DAltimos eventos realizados");
-	mntmNewMenuItem.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmNewMenuItem.setIcon(new ImageIcon(home.class.getResource("/img/Text_preview.png")));
-	mnNewMenu_2.add(mntmNewMenuItem);
+	JMenuItem mntmRelatorioUltimosEventosRealizados = new JMenuItem("\u00DAltimos eventos realizados");
+	mntmRelatorioUltimosEventosRealizados.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			ChamarTelas.abrir("UltimosEventosRealizadosRelatorio");
+		}
+	});
+	mntmRelatorioUltimosEventosRealizados.setFont(new Font("Arial", Font.PLAIN, 12));
+	mntmRelatorioUltimosEventosRealizados.setIcon(new ImageIcon(home.class.getResource("/img/Text_preview.png")));
+	mnNewMenu_2.add(mntmRelatorioUltimosEventosRealizados);
 
-	JMenuItem mntmUsuriosCadastrados = new JMenuItem("Usu\u00E1rios cadastrados");
-	mntmUsuriosCadastrados.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmUsuriosCadastrados.setIcon(new ImageIcon(home.class.getResource("/img/Text_preview.png")));
-	mnNewMenu_2.add(mntmUsuriosCadastrados);
+	JMenuItem mntmRelatorioUltimosEventosUsuariosCadastrados = new JMenuItem("Usu\u00E1rios cadastrados");
+	mntmRelatorioUltimosEventosUsuariosCadastrados.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			ChamarTelas.abrir("UsuariosCadastradosRelatorio");
+		}
+	});
+	mntmRelatorioUltimosEventosUsuariosCadastrados.setFont(new Font("Arial", Font.PLAIN, 12));
+	mntmRelatorioUltimosEventosUsuariosCadastrados.setIcon(new ImageIcon(home.class.getResource("/img/Text_preview.png")));
+	mnNewMenu_2.add(mntmRelatorioUltimosEventosUsuariosCadastrados);
 
 	JMenu mnNewMenu_3 = new JMenu("Sobre");
 	mnNewMenu_3.setFont(new Font("Arial", Font.PLAIN, 12));
 	mnNewMenu_3.setIcon(new ImageIcon(home.class.getResource("/img/Info.png")));
 	menuBar.add(mnNewMenu_3);
 
-	JMenuItem mntmUniforOnline = new JMenuItem("Unifor Online");
-	mntmUniforOnline.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmUniforOnline.setIcon(new ImageIcon(home.class.getResource("/img/Info.png")));
-	mnNewMenu_3.add(mntmUniforOnline);
+	JMenuItem mntmSobreUniforOnline = new JMenuItem("Unifor Online");
+	mntmSobreUniforOnline.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			ChamarTelas.abrir("UniforOnlineSobre");
+		}
+	});
+	mntmSobreUniforOnline.setFont(new Font("Arial", Font.PLAIN, 12));
+	mntmSobreUniforOnline.setIcon(new ImageIcon(home.class.getResource("/img/Info.png")));
+	mnNewMenu_3.add(mntmSobreUniforOnline);
 
 	JMenuItem mntmSobreOSistema = new JMenuItem("Sobre o sistema");
+	mntmSobreOSistema.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			negocio.ChamarTelas.abrir("SobreOSistemaSobre");
+		}
+	});
 	mntmSobreOSistema.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmSobreOSistema.setIcon(new ImageIcon(home.class.getResource("/img/Info.png")));
 	mnNewMenu_3.add(mntmSobreOSistema);
 
-	JMenuItem mntmVerso = new JMenuItem("Vers\u00E3o");
-	mntmVerso.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmVerso.setIcon(new ImageIcon(home.class.getResource("/img/Info.png")));
-	mnNewMenu_3.add(mntmVerso);
+	JMenuItem mntmSobreVersao = new JMenuItem("Vers\u00E3o");
+	mntmSobreVersao.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent arg0) {
+			negocio.ChamarTelas.abrir("VersaoSobre");
+		}
+	});
+	mntmSobreVersao.setFont(new Font("Arial", Font.PLAIN, 12));
+	mntmSobreVersao.setIcon(new ImageIcon(home.class.getResource("/img/Info.png")));
+	mnNewMenu_3.add(mntmSobreVersao);
     }
 
 }
