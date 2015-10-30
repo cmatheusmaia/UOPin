@@ -63,7 +63,7 @@ public class telaSobreSistema extends JFrame {
 		JLabel label = new JLabel("VERS\u00C3O DO SISTEMA 1.0.1 - BUILDER 2015");
 		label.setForeground(SystemColor.controlShadow);
 		label.setFont(new Font("Arial", Font.PLAIN, 10));
-		label.setBounds(250, 406, 231, 23);
+		label.setBounds(239, 416, 231, 23);
 		contentPane.add(label);
 	}
 }

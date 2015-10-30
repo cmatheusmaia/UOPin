@@ -78,16 +78,6 @@ public class telaVersao extends JFrame {
 		lblComIssoPodemos.setBounds(10, 60, 674, 14);
 		contentPane.add(lblComIssoPodemos);
 		
-		JLabel lblMapaDoSistema = new JLabel("Mapa do sistema");
-		lblMapaDoSistema.setFont(new Font("Arial", Font.BOLD, 18));
-		lblMapaDoSistema.setBounds(10, 87, 626, 14);
-		contentPane.add(lblMapaDoSistema);
-		
-		JLabel label = new JLabel("1.");
-		label.setFont(new Font("Arial", Font.PLAIN, 11));
-		label.setBounds(10, 109, 492, 14);
-		contentPane.add(label);
-		
 		JLabel label_1 = new JLabel("UNFOR MOBILE. VERS\u00C3O 1.0.1 BUILDER 2015");
 		label_1.setForeground(SystemColor.controlShadow);
 		label_1.setFont(new Font("Arial", Font.PLAIN, 8));
