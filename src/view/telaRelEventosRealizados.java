@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import negocio.PadroesDeTelas;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -37,12 +40,8 @@ public class telaRelEventosRealizados extends JFrame {
 	 * Create the frame.
 	 */
 	public telaRelEventosRealizados() {
+	    	PadroesDeTelas.definir(this);
 		setTitle("RELAT\u00D3RIO DE EVENTOS REALIZADOS NA UNIFOR - 1.0.1");
-		setVisible(true);
-		setLocationRelativeTo(null);
-		setResizable(false);
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 700, 500);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

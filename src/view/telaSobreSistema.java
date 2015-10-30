@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import negocio.PadroesDeTelas;
+
 import java.awt.Color;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
@@ -40,12 +43,8 @@ public class telaSobreSistema extends JFrame {
 	 * Create the frame.
 	 */
 	public telaSobreSistema() {
-		setVisible(true);
-		setLocationRelativeTo(null);
-		setResizable(false);
+	    	PadroesDeTelas.definir(this);
 		setTitle("SOBRE O SISTEMA - 1.0.1");
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 700, 500);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);

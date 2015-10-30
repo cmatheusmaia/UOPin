@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import negocio.PadroesDeTelas;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -36,12 +39,8 @@ public class telaExcluirEstabelecimento extends JFrame {
 	 * Create the frame.
 	 */
 	public telaExcluirEstabelecimento() {
-		setVisible(true);
-		setLocationRelativeTo(null);
-		setResizable(false);
+	    	PadroesDeTelas.definir(this);
 		setTitle("EXCLUIR ESTABELECIMENTO - 1.0.1");
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 700, 500);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

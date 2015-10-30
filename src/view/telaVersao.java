@@ -10,6 +10,9 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.border.TitledBorder;
+
+import negocio.PadroesDeTelas;
+
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
@@ -42,13 +45,9 @@ public class telaVersao extends JFrame {
 	 * Create the frame.
 	 */
 	public telaVersao() {
-		setTitle("VERS\u00C3O DO SISTEMA - 1.0.1");
+	    	PadroesDeTelas.definir(this);
+	    	setTitle("VERS\u00C3O DO SISTEMA - 1.0.1");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(telaVersao.class.getResource("/img/unifor_logo.png")));
-		setVisible(true);
-		setLocationRelativeTo(null);
-		setResizable(false);
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 700, 500);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);

@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import negocio.PadroesDeTelas;
+
 import java.awt.Color;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
@@ -54,13 +57,8 @@ public class telaCadastroUsuario extends JFrame {
      */
     
     public telaCadastroUsuario() {
-    	setIconImage(Toolkit.getDefaultToolkit().getImage(telaCadastroUsuario.class.getResource("/img/unifor_logo.png")));
-    	setVisible(true);
-    	setLocationRelativeTo(null);
-    	setResizable(false);
+    	PadroesDeTelas.definir(this);
     	setTitle("CADASTRO DE USUARIO - 1.0.2");
-	setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-	setBounds(100, 100, 700, 500);
 	
 	JMenuBar menuBar = new JMenuBar();
 	setJMenuBar(menuBar);

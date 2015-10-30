@@ -6,6 +6,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import negocio.PadroesDeTelas;
+
 import java.awt.Color;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
@@ -59,13 +61,8 @@ public class telaCadastroEvento extends JFrame {
      * Create the frame.
      */
     public telaCadastroEvento() {
-    	setIconImage(Toolkit.getDefaultToolkit().getImage(telaCadastroEvento.class.getResource("/img/unifor_logo.png")));
-    	setLocationRelativeTo(null);
-    	setVisible(true);
-    	setResizable(false);
+    	PadroesDeTelas.definir(this);
     	setTitle("CADASTRO DE EVENTO - 1.0.1");
-	setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-	setBounds(100, 100, 700, 500);
 	
 	JMenuBar menuBar = new JMenuBar();
 	setJMenuBar(menuBar);
@@ -203,4 +200,6 @@ public class telaCadastroEvento extends JFrame {
 	lblTipo.setBounds(465, 202, 154, 23);
 	contentPane.add(lblTipo);
     }
+
+
 }

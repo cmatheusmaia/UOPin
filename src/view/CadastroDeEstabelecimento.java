@@ -13,6 +13,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 
 import dao.InseriEstabelecimento;
+import negocio.PadroesDeTelas;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -57,14 +58,9 @@ public class CadastroDeEstabelecimento extends JFrame {
 	 * Create the frame.
 	 */
 	public CadastroDeEstabelecimento() {
-		setVisible(true);
-		setLocationRelativeTo(null);
-		setResizable(false);
+	    	PadroesDeTelas.definir(this);
 		setTitle("ESTABELECIMENTO - 1.0.1");
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 700, 500);
 		contentPane = new JPanel();
-		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
