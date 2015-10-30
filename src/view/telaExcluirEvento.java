@@ -24,6 +24,7 @@ public class telaExcluirEvento extends JFrame {
 				try {
 					telaExcluirEvento frame = new telaExcluirEvento();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -37,6 +38,7 @@ public class telaExcluirEvento extends JFrame {
 	public telaExcluirEvento() {
 		setTitle("EXCLUIR EVENTO - 1.0.1");
 		setVisible(true);
+		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 700, 500);

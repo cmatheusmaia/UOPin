@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.Dimension;
+
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.ImageIcon;
@@ -15,6 +17,8 @@ import javax.swing.border.SoftBevelBorder;
 
 import negocio.ChamarTelas;
 import java.awt.Font;
+import java.awt.Point;
+
 import javax.swing.JLabel;
 import java.awt.SystemColor;
 import java.awt.Toolkit;
@@ -23,8 +27,7 @@ import java.awt.event.ActionEvent;
 
 public class home{
 
-    private JFrame frmUnfiorFerramenta;
-
+    private JFrame frmUniforFerramenta;
     /**
      * Launch the application.
      */
@@ -33,7 +36,8 @@ public class home{
 	    public void run() {
 		try {
 		    home window = new home();
-		    window.frmUnfiorFerramenta.setVisible(true);
+		    window.frmUniforFerramenta.setVisible(true);
+		    window.frmUniforFerramenta.setLocationRelativeTo(null);
 		} catch (Exception e) {
 		    e.printStackTrace();
 		}
@@ -53,29 +57,30 @@ public class home{
      */
     private void initComponents() {
 
-	frmUnfiorFerramenta = new JFrame();
-	frmUnfiorFerramenta.setVisible(true);
-	frmUnfiorFerramenta.setResizable(false);
-	frmUnfiorFerramenta.setIconImage(Toolkit.getDefaultToolkit().getImage(home.class.getResource("/img/unifor_logo.png")));
-	frmUnfiorFerramenta.setTitle("UNIFOR - FERRAMENTA DE GEST\u00C3O - 1.0.1");
-	frmUnfiorFerramenta.getContentPane().setBackground(Color.WHITE);
-	frmUnfiorFerramenta.setBounds(100, 100, 700, 500);
-	frmUnfiorFerramenta.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-	frmUnfiorFerramenta.getContentPane().setLayout(null);
+	frmUniforFerramenta = new JFrame();
+	frmUniforFerramenta.setLocationRelativeTo(null);
+	frmUniforFerramenta.setVisible(true);
+	frmUniforFerramenta.setResizable(false);
+	frmUniforFerramenta.setIconImage(Toolkit.getDefaultToolkit().getImage(home.class.getResource("/img/unifor_logo.png")));
+	frmUniforFerramenta.setTitle("UNIFOR - FERRAMENTA DE GEST\u00C3O - 1.0.1");
+	frmUniforFerramenta.getContentPane().setBackground(Color.WHITE);
+	frmUniforFerramenta.setBounds(100, 100, 700, 500);
+	frmUniforFerramenta.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frmUniforFerramenta.getContentPane().setLayout(null);
 
 	JLabel lblNewLabel = new JLabel("");
 	lblNewLabel.setIcon(new ImageIcon(home.class.getResource("/img/uniforGray.png")));
 	lblNewLabel.setBounds(222, 95, 280, 251);
-	frmUnfiorFerramenta.getContentPane().add(lblNewLabel);
+	frmUniforFerramenta.getContentPane().add(lblNewLabel);
 
 	JLabel label = new JLabel("VERS\u00C3O DO SISTEMA 1.0.1 - BUILDER 2015");
 	label.setForeground(SystemColor.controlShadow);
 	label.setFont(new Font("Arial", Font.PLAIN, 10));
 	label.setBounds(250, 417, 231, 23);
-	frmUnfiorFerramenta.getContentPane().add(label);
+	frmUniforFerramenta.getContentPane().add(label);
 
 	JMenuBar menuBar = new JMenuBar();
-	frmUnfiorFerramenta.setJMenuBar(menuBar);
+	frmUniforFerramenta.setJMenuBar(menuBar);
 
 	JMenu mnNewMenu = new JMenu("Arquivo");
 	mnNewMenu.setFont(new Font("Arial", Font.PLAIN, 12));

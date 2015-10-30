@@ -24,6 +24,7 @@ public class telaExcluirUsuario extends JFrame {
 				try {
 					telaExcluirUsuario frame = new telaExcluirUsuario();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -37,6 +38,7 @@ public class telaExcluirUsuario extends JFrame {
 	public telaExcluirUsuario() {
 		setTitle("EXCLUIR USU\u00C1RIO");
 		setVisible(true);
+		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 700, 500);

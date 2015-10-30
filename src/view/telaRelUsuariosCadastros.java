@@ -24,6 +24,7 @@ public class telaRelUsuariosCadastros extends JFrame {
 				try {
 					telaRelUsuariosCadastros frame = new telaRelUsuariosCadastros();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -37,6 +38,7 @@ public class telaRelUsuariosCadastros extends JFrame {
 	public telaRelUsuariosCadastros() {
 		setTitle("RELAT\u00D3RIO DE USU\u00C1RIOS CADASTRADOS - 1.0.1");
 		setVisible(true);
+		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 700, 500);

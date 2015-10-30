@@ -10,6 +10,7 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.SystemColor;
+import javax.swing.JTextPane;
 
 public class telaRelEventosRealizados extends JFrame {
 
@@ -24,6 +25,7 @@ public class telaRelEventosRealizados extends JFrame {
 				try {
 					telaRelEventosRealizados frame = new telaRelEventosRealizados();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -37,6 +39,7 @@ public class telaRelEventosRealizados extends JFrame {
 	public telaRelEventosRealizados() {
 		setTitle("RELAT\u00D3RIO DE EVENTOS REALIZADOS NA UNIFOR - 1.0.1");
 		setVisible(true);
+		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 700, 500);
@@ -52,5 +55,4 @@ public class telaRelEventosRealizados extends JFrame {
 		label.setBounds(227, 427, 231, 23);
 		contentPane.add(label);
 	}
-
 }

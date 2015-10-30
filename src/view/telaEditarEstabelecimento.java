@@ -24,6 +24,7 @@ public class telaEditarEstabelecimento extends JFrame {
 				try {
 					telaEditarEstabelecimento frame = new telaEditarEstabelecimento();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -36,6 +37,8 @@ public class telaEditarEstabelecimento extends JFrame {
 	 */
 	public telaEditarEstabelecimento() {
 		setTitle("EDITAR ESTABELECIMENTO - 1.0.1");
+		setVisible(true);
+		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 700, 500);

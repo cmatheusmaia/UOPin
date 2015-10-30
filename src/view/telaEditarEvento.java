@@ -27,6 +27,7 @@ public class telaEditarEvento extends JFrame {
 				try {
 					telaEditarEvento frame = new telaEditarEvento();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -40,6 +41,7 @@ public class telaEditarEvento extends JFrame {
 	public telaEditarEvento() {
 		setTitle("EDITAR EVENTO - 1.0.1");
 		setVisible(true);
+		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 700, 500);

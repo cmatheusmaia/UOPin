@@ -41,6 +41,7 @@ public class telaCadastroUsuario extends JFrame {
 		try {
 		    telaCadastroUsuario frame = new telaCadastroUsuario();
 		    frame.setVisible(true);
+		    frame.setLocationRelativeTo(null);
 		} catch (Exception e) {
 		    e.printStackTrace();
 		}
@@ -55,6 +56,7 @@ public class telaCadastroUsuario extends JFrame {
     public telaCadastroUsuario() {
     	setIconImage(Toolkit.getDefaultToolkit().getImage(telaCadastroUsuario.class.getResource("/img/unifor_logo.png")));
     	setVisible(true);
+    	setLocationRelativeTo(null);
     	setResizable(false);
     	setTitle("CADASTRO DE USUARIO - 1.0.2");
 	setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

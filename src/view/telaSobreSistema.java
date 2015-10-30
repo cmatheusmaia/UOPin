@@ -28,6 +28,7 @@ public class telaSobreSistema extends JFrame {
 				try {
 					telaSobreSistema frame = new telaSobreSistema();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -40,6 +41,7 @@ public class telaSobreSistema extends JFrame {
 	 */
 	public telaSobreSistema() {
 		setVisible(true);
+		setLocationRelativeTo(null);
 		setResizable(false);
 		setTitle("SOBRE O SISTEMA - 1.0.1");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

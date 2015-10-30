@@ -44,6 +44,7 @@ public class CadastroDeEstabelecimento extends JFrame {
 			public void run() {
 				try {
 					CadastroDeEstabelecimento frame = new CadastroDeEstabelecimento();
+					frame.setLocationRelativeTo(null);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -57,6 +58,7 @@ public class CadastroDeEstabelecimento extends JFrame {
 	 */
 	public CadastroDeEstabelecimento() {
 		setVisible(true);
+		setLocationRelativeTo(null);
 		setResizable(false);
 		setTitle("ESTABELECIMENTO - 1.0.1");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
