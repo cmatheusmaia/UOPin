@@ -36,6 +36,7 @@ public class telaCadastroEstabelecimento extends JFrame {
 	 */
 	public telaCadastroEstabelecimento() {
 		setVisible(true);
+		setLocationRelativeTo(null);
 		setResizable(false);
 		setTitle("CADASTRAR  ESTABELECIMENTO - 1.0.1");
 		setEnabled(false);

@@ -24,6 +24,7 @@ public class telaEditarUsuario extends JFrame {
 				try {
 					telaEditarUsuario frame = new telaEditarUsuario();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -38,6 +39,7 @@ public class telaEditarUsuario extends JFrame {
 		setTitle("EDITAR USU\u00C1RIO - 1.0.1");
 		setBackground(Color.WHITE);
 		setVisible(true);
+		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 700, 500);

@@ -24,6 +24,7 @@ public class telaExcluirEstabelecimento extends JFrame {
 				try {
 					telaExcluirEstabelecimento frame = new telaExcluirEstabelecimento();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -36,6 +37,7 @@ public class telaExcluirEstabelecimento extends JFrame {
 	 */
 	public telaExcluirEstabelecimento() {
 		setVisible(true);
+		setLocationRelativeTo(null);
 		setResizable(false);
 		setTitle("EXCLUIR ESTABELECIMENTO - 1.0.1");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

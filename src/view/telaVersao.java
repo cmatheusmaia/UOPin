@@ -30,6 +30,7 @@ public class telaVersao extends JFrame {
 			try {
 			    telaCadastroEvento frame = new telaCadastroEvento();
 			    frame.setVisible(true);
+			    frame.setLocationRelativeTo(null);
 			} catch (Exception e) {
 			    e.printStackTrace();
 			}
@@ -44,6 +45,7 @@ public class telaVersao extends JFrame {
 		setTitle("VERS\u00C3O DO SISTEMA - 1.0.1");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(telaVersao.class.getResource("/img/unifor_logo.png")));
 		setVisible(true);
+		setLocationRelativeTo(null);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 700, 500);

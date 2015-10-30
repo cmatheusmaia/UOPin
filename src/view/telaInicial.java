@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Dimension;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -13,6 +14,7 @@ import negocio.managerInicial;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.Point;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
@@ -24,6 +26,7 @@ public class telaInicial {
     protected JFrame frmUniforFerramenta;
     protected static JTextField txtUsuario;
     protected static JPasswordField txtSenha;
+    
 
     /**
      * Launch the application.
@@ -34,6 +37,7 @@ public class telaInicial {
 		try {
 		    telaInicial window = new telaInicial();
 		    window.frmUniforFerramenta.setVisible(true);
+		    window.frmUniforFerramenta.setLocationRelativeTo(null);
 		} catch (Exception e) {
 		    e.printStackTrace();
 		}
