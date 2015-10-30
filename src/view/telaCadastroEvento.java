@@ -60,8 +60,8 @@ public class telaCadastroEvento extends JFrame {
      */
     public telaCadastroEvento() {
     	setIconImage(Toolkit.getDefaultToolkit().getImage(telaCadastroEvento.class.getResource("/img/unifor_logo.png")));
-    	setVisible(true);
     	setLocationRelativeTo(null);
+    	setVisible(true);
     	setResizable(false);
     	setTitle("CADASTRO DE EVENTO - 1.0.1");
 	setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

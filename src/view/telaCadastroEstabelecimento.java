@@ -23,6 +23,7 @@ public class telaCadastroEstabelecimento extends JFrame {
 			public void run() {
 				try {
 					telaCadastroEstabelecimento frame = new telaCadastroEstabelecimento();
+					frame.setLocationRelativeTo(null);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -35,8 +36,8 @@ public class telaCadastroEstabelecimento extends JFrame {
 	 * Create the frame.
 	 */
 	public telaCadastroEstabelecimento() {
-		setVisible(true);
 		setLocationRelativeTo(null);
+	    	setVisible(true);
 		setResizable(false);
 		setTitle("CADASTRAR  ESTABELECIMENTO - 1.0.1");
 		setEnabled(false);

@@ -89,7 +89,7 @@ public class telaInicial {
 	JButton btnNewButton = new JButton("ENTRAR");
 	btnNewButton.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
-		managerInicial.entrar(txtUsuario, txtSenha);
+		managerInicial.entrar(txtUsuario, txtSenha, frmUniforFerramenta);
 	    }
 	});
 	btnNewButton.setBounds(82, 351, 89, 32);

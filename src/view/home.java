@@ -58,14 +58,14 @@ public class home{
     private void initComponents() {
 
 	frmUniforFerramenta = new JFrame();
-	frmUniforFerramenta.setVisible(true);
 	frmUniforFerramenta.setLocationRelativeTo(null);
+	frmUniforFerramenta.setVisible(true);
 	frmUniforFerramenta.setResizable(false);
 	frmUniforFerramenta.setIconImage(Toolkit.getDefaultToolkit().getImage(home.class.getResource("/img/unifor_logo.png")));
 	frmUniforFerramenta.setTitle("UNIFOR - FERRAMENTA DE GEST\u00C3O - 1.0.1");
 	frmUniforFerramenta.getContentPane().setBackground(Color.WHITE);
 	frmUniforFerramenta.setBounds(100, 100, 700, 500);
-	frmUniforFerramenta.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+	frmUniforFerramenta.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	frmUniforFerramenta.getContentPane().setLayout(null);
 
 	JLabel lblNewLabel = new JLabel("");
