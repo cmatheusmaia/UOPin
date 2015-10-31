@@ -57,7 +57,7 @@ public class telaCadastroUsuario extends JFrame {
      */
     
     public telaCadastroUsuario() {
-    	PadroesDeTelas.definir(this);
+
     	setTitle("CADASTRO DE USUARIO - 1.0.2");
 	
 	JMenuBar menuBar = new JMenuBar();

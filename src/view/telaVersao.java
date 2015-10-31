@@ -45,7 +45,6 @@ public class telaVersao extends JFrame {
 	 * Create the frame.
 	 */
 	public telaVersao() {
-	    	PadroesDeTelas.definir(this);
 	    	setTitle("VERS\u00C3O DO SISTEMA - 1.0.1");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(telaVersao.class.getResource("/img/unifor_logo.png")));
 		

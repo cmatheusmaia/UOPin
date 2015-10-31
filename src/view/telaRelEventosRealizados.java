@@ -40,7 +40,6 @@ public class telaRelEventosRealizados extends JFrame {
 	 * Create the frame.
 	 */
 	public telaRelEventosRealizados() {
-	    	PadroesDeTelas.definir(this);
 		setTitle("RELAT\u00D3RIO DE EVENTOS REALIZADOS NA UNIFOR - 1.0.1");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);

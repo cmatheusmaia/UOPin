@@ -39,7 +39,6 @@ public class telaExcluirEstabelecimento extends JFrame {
 	 * Create the frame.
 	 */
 	public telaExcluirEstabelecimento() {
-	    	PadroesDeTelas.definir(this);
 		setTitle("EXCLUIR ESTABELECIMENTO - 1.0.1");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);

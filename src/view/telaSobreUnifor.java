@@ -40,7 +40,6 @@ public class telaSobreUnifor extends JFrame {
 	 * Create the frame.
 	 */
 	public telaSobreUnifor() {
-	    	PadroesDeTelas.definir(this);
 		setTitle("UNIFOR ONLINE - 1.0.1");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);

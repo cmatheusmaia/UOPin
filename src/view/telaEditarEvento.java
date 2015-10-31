@@ -42,7 +42,6 @@ public class telaEditarEvento extends JFrame {
 	 * Create the frame.
 	 */
 	public telaEditarEvento() {
-	    	PadroesDeTelas.definir(this);
 		setTitle("EDITAR EVENTO - 1.0.1");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);

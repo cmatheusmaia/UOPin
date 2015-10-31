@@ -39,7 +39,6 @@ public class telaEditarUsuario extends JFrame {
 	 * Create the frame.
 	 */
 	public telaEditarUsuario() {
-	    	PadroesDeTelas.definir(this);
 		setTitle("EDITAR USU\u00C1RIO - 1.0.1");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);

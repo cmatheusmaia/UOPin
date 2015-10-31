@@ -16,6 +16,8 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.SoftBevelBorder;
 
 import negocio.ChamarTelas;
+import negocio.managerSairDoSistema;
+
 import java.awt.Font;
 import java.awt.Point;
 
@@ -58,15 +60,15 @@ public class home{
     private void initComponents() {
 
 	frmUniforFerramenta = new JFrame();
-	frmUniforFerramenta.setLocationRelativeTo(null);
-	frmUniforFerramenta.setVisible(true);
 	frmUniforFerramenta.setResizable(false);
 	frmUniforFerramenta.setIconImage(Toolkit.getDefaultToolkit().getImage(home.class.getResource("/img/unifor_logo.png")));
 	frmUniforFerramenta.setTitle("UNIFOR - FERRAMENTA DE GEST\u00C3O - 1.0.1");
 	frmUniforFerramenta.getContentPane().setBackground(Color.WHITE);
 	frmUniforFerramenta.setBounds(100, 100, 700, 500);
+	frmUniforFerramenta.setLocationRelativeTo(null);
 	frmUniforFerramenta.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	frmUniforFerramenta.getContentPane().setLayout(null);
+	frmUniforFerramenta.setVisible(true);
 
 	JLabel lblNewLabel = new JLabel("");
 	lblNewLabel.setIcon(new ImageIcon(home.class.getResource("/img/uniforGray.png")));
@@ -90,7 +92,7 @@ public class home{
 	JMenuItem mntmSair = new JMenuItem("Sair");
 	mntmSair.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {			
-			negocio.managerSairDoSistema.sair();
+			managerSairDoSistema.sair();
 		}
 	});
 	mntmSair.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -110,7 +112,7 @@ public class home{
 	JMenuItem mntmEstabelecimentoAdicionar = new JMenuItem("Adicionar");
 	mntmEstabelecimentoAdicionar.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir("CadastrarEstabelecimento");
+			ChamarTelas.abrir(new telaCadastroEstabelecimento());
 		}
 	});
 	mntmEstabelecimentoAdicionar.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -120,7 +122,7 @@ public class home{
 	JMenuItem mntmEstabelecimentoEditar = new JMenuItem("Editar");
 	mntmEstabelecimentoEditar.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir("EditarEstabelecimento");
+			ChamarTelas.abrir(new telaEditarEstabelecimento());
 			
 		}
 	});
@@ -131,7 +133,7 @@ public class home{
 	JMenuItem mntmEstabelecimentoExcluir = new JMenuItem("Excluir");
 	mntmEstabelecimentoExcluir.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir("ExcluirEstabelecimento");
+			ChamarTelas.abrir(new telaExcluirEstabelecimento());
 		}
 	});
 	mntmEstabelecimentoExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -146,7 +148,7 @@ public class home{
 	JMenuItem mntmEventoAdcionar = new JMenuItem("Adcionar");
 	mntmEventoAdcionar.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-		    ChamarTelas.abrir("CadastrarEvento");
+		    ChamarTelas.abrir(new telaCadastroEvento());
 		}
 	});
 	mntmEventoAdcionar.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -156,7 +158,7 @@ public class home{
 	JMenuItem mntmEventoEditar = new JMenuItem("Editar");
 	mntmEventoEditar.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir("EditarEvento");
+			ChamarTelas.abrir(new telaEditarEvento());
 		}
 	});
 	mntmEventoEditar.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -166,7 +168,7 @@ public class home{
 	JMenuItem mntmEventoExcluir = new JMenuItem("Excluir");
 	mntmEventoExcluir.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir("ExcluirEvento");
+			ChamarTelas.abrir(new telaExcluirEvento());
 		}
 	});
 	mntmEventoExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -181,7 +183,7 @@ public class home{
 	JMenuItem mntmUsuarioAdicionar = new JMenuItem("Adicionar");
 	mntmUsuarioAdicionar.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-		    ChamarTelas.abrir("CadastrarUsuario");
+		    ChamarTelas.abrir(new telaCadastroUsuario());
 		}
 	});
 	mntmUsuarioAdicionar.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -191,7 +193,7 @@ public class home{
 	JMenuItem mntmUsuarioEditar = new JMenuItem("Editar");
 	mntmUsuarioEditar.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir("EditarUsuario");
+			ChamarTelas.abrir(new telaEditarUsuario());
 		}
 	});
 	mntmUsuarioEditar.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -201,7 +203,7 @@ public class home{
 	JMenuItem mntmUsuarioExcluir = new JMenuItem("Excluir");
 	mntmUsuarioExcluir.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir("ExcluirUsuario");
+			ChamarTelas.abrir(new telaExcluirUsuario());
 		}
 	});
 	mntmUsuarioExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -216,7 +218,7 @@ public class home{
 	JMenuItem mntmRelatorioUltimosEventosRealizados = new JMenuItem("\u00DAltimos eventos realizados");
 	mntmRelatorioUltimosEventosRealizados.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir("UltimosEventosRealizadosRelatorio");
+			ChamarTelas.abrir(new telaRelEventosRealizados());
 		}
 	});
 	mntmRelatorioUltimosEventosRealizados.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -226,7 +228,7 @@ public class home{
 	JMenuItem mntmRelatorioUltimosEventosUsuariosCadastrados = new JMenuItem("Usu\u00E1rios cadastrados");
 	mntmRelatorioUltimosEventosUsuariosCadastrados.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir("UsuariosCadastradosRelatorio");
+			ChamarTelas.abrir(new telaRelUsuariosCadastros());
 		}
 	});
 	mntmRelatorioUltimosEventosUsuariosCadastrados.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -241,7 +243,7 @@ public class home{
 	JMenuItem mntmSobreUniforOnline = new JMenuItem("Unifor Online");
 	mntmSobreUniforOnline.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir("UniforOnlineSobre");
+			ChamarTelas.abrir(new telaSobreUnifor());
 		}
 	});
 	mntmSobreUniforOnline.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -251,7 +253,7 @@ public class home{
 	JMenuItem mntmSobreOSistema = new JMenuItem("Sobre o sistema");
 	mntmSobreOSistema.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-			negocio.ChamarTelas.abrir("SobreOSistemaSobre");
+			ChamarTelas.abrir(new telaSobreSistema());
 		}
 	});
 	mntmSobreOSistema.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -261,7 +263,7 @@ public class home{
 	JMenuItem mntmSobreVersao = new JMenuItem("Vers\u00E3o");
 	mntmSobreVersao.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
-			negocio.ChamarTelas.abrir("VersaoSobre");
+			ChamarTelas.abrir(new telaVersao());
 		}
 	});
 	mntmSobreVersao.setFont(new Font("Arial", Font.PLAIN, 12));

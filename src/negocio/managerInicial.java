@@ -16,7 +16,7 @@ public class managerInicial{
 
 	if (cl.acesso == true) {
 	    new home();
-	    tela.setVisible(false);
+	    tela.dispose();
 	    
 	}
 

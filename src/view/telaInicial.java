@@ -26,7 +26,6 @@ public class telaInicial {
     protected JFrame frmUniforFerramenta;
     protected static JTextField txtUsuario;
     protected static JPasswordField txtSenha;
-    
 
     /**
      * Launch the application.
@@ -36,7 +35,6 @@ public class telaInicial {
 	    public void run() {
 		try {
 		    telaInicial window = new telaInicial();
-		    window.frmUniforFerramenta.setVisible(true);
 		    window.frmUniforFerramenta.setLocationRelativeTo(null);
 		} catch (Exception e) {
 		    e.printStackTrace();
@@ -57,12 +55,12 @@ public class telaInicial {
      */
     private void initialize() {
 	frmUniforFerramenta = new JFrame();
-	frmUniforFerramenta.setVisible(true);
 	frmUniforFerramenta.setResizable(false);
 	frmUniforFerramenta.setIconImage(
 		Toolkit.getDefaultToolkit().getImage(telaInicial.class.getResource("/img/unifor_logo.png")));
 	frmUniforFerramenta.getContentPane().setBackground(SystemColor.textHighlightText);
 	frmUniforFerramenta.getContentPane().setLayout(null);
+	frmUniforFerramenta.setVisible(true);
 
 	JLabel lblNewLabel = new JLabel("New label");
 	lblNewLabel.setIcon(new ImageIcon(telaInicial.class.getResource("/img/UNIFOR_Logo_21.gif")));

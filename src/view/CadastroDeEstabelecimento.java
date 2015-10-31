@@ -58,7 +58,6 @@ public class CadastroDeEstabelecimento extends JFrame {
 	 * Create the frame.
 	 */
 	public CadastroDeEstabelecimento() {
-	    	PadroesDeTelas.definir(this);
 		setTitle("ESTABELECIMENTO - 1.0.1");
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

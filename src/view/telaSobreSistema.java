@@ -43,7 +43,6 @@ public class telaSobreSistema extends JFrame {
 	 * Create the frame.
 	 */
 	public telaSobreSistema() {
-	    	PadroesDeTelas.definir(this);
 		setTitle("SOBRE O SISTEMA - 1.0.1");
 		
 		JMenuBar menuBar = new JMenuBar();

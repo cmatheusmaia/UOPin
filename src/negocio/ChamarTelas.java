@@ -6,71 +6,74 @@ package negocio;
  * As rotinas são atividades que o usuário poderá executar em meio a autenticação do sistema.
  */
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import view.*;
 
 public class ChamarTelas {
 
-    public static void abrir(String nomeDaTela) {
+    public static void abrir(JFrame tela) {
 	JOptionPane.showMessageDialog(null, "Carregando rotina");
-	
+
 	// Responsável para chamar rotinas de: Cadastro;
-	
-	switch (nomeDaTela) {
-	case "CadastrarEvento":
-		new telaCadastroEvento();
+
+	switch (tela.toString()) {
+	case "telaCadastrarEvento":
+	    new telaCadastroEvento();
 	    break;
-	case "ExcluirEvento":
+	case "telaExcluirEvento":
 	    new telaExcluirEvento();
-	    break;	   
-	case "EditarEvento":
+	    break;
+	case "telaEditarEvento":
 	    new telaEditarEvento();
-	    break;	    
-	case "CadastrarUsuario":
+	    break;
+	case "telaCadastrarUsuario":
 	    new telaCadastroUsuario();
 	    break;
-	case "EditarUsuario":
+	case "telaEditarUsuario":
 	    new telaEditarUsuario();
 	    break;
-	case "ExcluirUsuario":
+	case "telaExcluirUsuario":
 	    new telaExcluirUsuario();
-	    break;	    
-	case "CadastrarEstabelecimento":
+	    break;
+	case "telaCadastrarEstabelecimento":
 	    new telaCadastroEstabelecimento();
 	    break;
-	case "EditarEstabelecimento":
+	case "telaEditarEstabelecimento":
 	    new telaEditarEstabelecimento();
 	    break;
-	case "ExcluirEstabelecimento":
+	case "telaExcluirEstabelecimento":
 	    new telaExcluirEstabelecimento();
-	    break;  
-	    
-	    
-	//  Responsável para chamar rotinas de: Relatórios;
-	    
-	case "UltimosEventosRealizadosRelatorio":
+	    break;
+
+	// Responsável para chamar rotinas de: Relatórios;
+
+	case "telaRelEventosRealizados":
 	    new telaRelEventosRealizados();
 	    break;
-	case "UsuariosCadastradosRelatorio":
+	case "telaRelUsuariosCadastros":
 	    new telaRelUsuariosCadastros();
-	    break;    
-	    
-	//  Responsável para chamar rotinas de: Sobre;
-	    
-	case "UniforOnlineSobre":
-		new telaSobreUnifor();
 	    break;
-	    
-	case "SobreOSistemaSobre":
-		new telaSobreSistema();
-	    break;    
-	case "VersaoSobre":
-		new telaVersao();
-	    break;    	    
-	    
+
+	// Responsável para chamar rotinas de: Sobre;
+
+	case "telaSobreUnifor":
+	    new telaSobreUnifor();
+	    break;
+
+	case "telaSobreSistema":
+	    new telaSobreSistema();
+	    break;
+	case "telaVersao":
+	    new telaVersao();
+	    break;
+
 	default:
 	    break;
 	}
+
+	PadroesDeTelas.definir(tela);
     }
+
 }

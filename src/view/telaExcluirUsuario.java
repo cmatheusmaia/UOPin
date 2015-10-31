@@ -39,7 +39,6 @@ public class telaExcluirUsuario extends JFrame {
 	 * Create the frame.
 	 */
 	public telaExcluirUsuario() {
-	    	PadroesDeTelas.definir(this);
 		setTitle("EXCLUIR USU\u00C1RIO");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);

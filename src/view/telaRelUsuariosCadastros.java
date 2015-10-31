@@ -39,7 +39,6 @@ public class telaRelUsuariosCadastros extends JFrame {
 	 * Create the frame.
 	 */
 	public telaRelUsuariosCadastros() {
-	    	PadroesDeTelas.definir(this);
 		setTitle("RELAT\u00D3RIO DE USU\u00C1RIOS CADASTRADOS - 1.0.1");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);

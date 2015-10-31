@@ -39,7 +39,6 @@ public class telaExcluirEvento extends JFrame {
 	 * Create the frame.
 	 */
 	public telaExcluirEvento() {
-	    	PadroesDeTelas.definir(this);
 		setTitle("EXCLUIR EVENTO - 1.0.1");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);

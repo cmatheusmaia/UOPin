@@ -61,8 +61,7 @@ public class telaCadastroEvento extends JFrame {
      * Create the frame.
      */
     public telaCadastroEvento() {
-    	PadroesDeTelas.definir(this);
-    	setTitle("CADASTRO DE EVENTO - 1.0.1");
+	setTitle("CADASTRO DE EVENTO - 1.0.1");
 	
 	JMenuBar menuBar = new JMenuBar();
 	setJMenuBar(menuBar);

@@ -39,7 +39,6 @@ public class telaCadastroEstabelecimento extends JFrame {
 	 * Create the frame.
 	 */
 	public telaCadastroEstabelecimento() {
-	    	PadroesDeTelas.definir(this);
 		setTitle("CADASTRAR  ESTABELECIMENTO - 1.0.1");
 		setEnabled(false);
 		contentPane = new JPanel();

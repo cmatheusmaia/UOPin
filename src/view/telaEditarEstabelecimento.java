@@ -39,7 +39,6 @@ public class telaEditarEstabelecimento extends JFrame {
 	 * Create the frame.
 	 */
 	public telaEditarEstabelecimento() {
-	    	PadroesDeTelas.definir(this);
 		setTitle("EDITAR ESTABELECIMENTO - 1.0.1");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
