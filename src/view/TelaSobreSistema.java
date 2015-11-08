@@ -19,7 +19,7 @@ import javax.swing.JLabel;
 import java.awt.SystemColor;
 import javax.swing.JTextPane;
 
-public class telaSobreSistema extends JFrame {
+public class TelaSobreSistema extends JFrame {
 
 	private JPanel contentPane;
 
@@ -30,7 +30,7 @@ public class telaSobreSistema extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telaSobreSistema frame = new telaSobreSistema();
+					TelaSobreSistema frame = new TelaSobreSistema();
 					frame.setVisible(true);
 					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
@@ -43,14 +43,14 @@ public class telaSobreSistema extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telaSobreSistema() {
+	public TelaSobreSistema() {
 		setTitle("SOBRE O SISTEMA - 1.0.1");
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
 		JMenu mnAjuda = new JMenu("Ajuda");
-		mnAjuda.setIcon(new ImageIcon(telaSobreSistema.class.getResource("/img/Info.png")));
+		mnAjuda.setIcon(new ImageIcon(TelaSobreSistema.class.getResource("/img/Info.png")));
 		menuBar.add(mnAjuda);
 		
 		JMenuItem mntmOQueMudou = new JMenuItem("O que mudou?");

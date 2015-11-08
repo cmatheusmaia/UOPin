@@ -1,6 +1,6 @@
 package negocio;
 
-public class managerCadastrarEvento {
+public class ManagerCadastrarEvento {
 
 	public static void chamarRotina(Object object) {
 		// TODO Auto-generated method stub

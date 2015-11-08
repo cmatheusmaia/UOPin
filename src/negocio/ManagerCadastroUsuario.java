@@ -1,8 +1,8 @@
 package negocio;
 
-import view.telaCadastroUsuario;
+import view.TelaCadastroUsuario;
 
-public class managerCadastroUsuario{
+public class ManagerCadastroUsuario{
 
   //class para intermediar o dao com a view
 

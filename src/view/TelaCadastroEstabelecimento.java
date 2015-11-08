@@ -11,7 +11,7 @@ import javax.swing.JTextField;
 
 import negocio.PadroesDeTelas;
 
-public class telaCadastroEstabelecimento extends JFrame {
+public class TelaCadastroEstabelecimento extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -27,7 +27,7 @@ public class telaCadastroEstabelecimento extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telaCadastroEstabelecimento frame = new telaCadastroEstabelecimento();
+					TelaCadastroEstabelecimento frame = new TelaCadastroEstabelecimento();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +39,7 @@ public class telaCadastroEstabelecimento extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telaCadastroEstabelecimento() {
+	public TelaCadastroEstabelecimento() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 698, 496);

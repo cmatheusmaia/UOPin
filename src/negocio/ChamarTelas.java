@@ -19,54 +19,54 @@ public class ChamarTelas {
 	// Responsável para chamar rotinas de: Cadastro;
 
 	switch (tela.toString()) {
-	case "telaCadastrarEvento":
-	    new telaCadastroEvento();
+	case "TelaCadastrarEvento":
+	    new TelaCadastroEvento();
 	    break;
-	case "telaExcluirEvento":
-	    new telaExcluirEvento();
+	case "TelaExcluirEvento":
+	    new TelaExcluirEvento();
 	    break;
-	case "telaEditarEvento":
-	    new telaEditarEvento();
+	case "TelaEditarEvento":
+	    new TelaEditarEvento();
 	    break;
-	case "telaCadastrarUsuario":
-	    new telaCadastroUsuario();
+	case "TelaCadastrarUsuario":
+	    new TelaCadastroUsuario();
 	    break;
-	case "telaEditarUsuario":
-	    new telaEditarUsuario();
+	case "TelaEditarUsuario":
+	    new TelaEditarUsuario();
 	    break;
-	case "telaExcluirUsuario":
-	    new telaExcluirUsuario();
+	case "TelaExcluirUsuario":
+	    new TelaExcluirUsuario();
 	    break;
-	case "telaCadastrarEstabelecimento":
-	    new telaCadastroEstabelecimento();
+	case "TelaCadastrarEstabelecimento":
+	    new TelaCadastroEstabelecimento();
 	    break;
-	case "telaEditarEstabelecimento":
-	    new telaEditarEstabelecimento();
+	case "TelaEditarEstabelecimento":
+	    new TelaEditarEstabelecimento();
 	    break;
-	case "telaExcluirEstabelecimento":
-	    new telaExcluirEstabelecimento();
+	case "TelaExcluirEstabelecimento":
+	    new TelaExcluirEstabelecimento();
 	    break;
 
 	// Responsável para chamar rotinas de: Relatórios;
 
-	case "telaRelEventosRealizados":
-	    new telaRelEventosRealizados();
+	case "TelaRelEventosRealizados":
+	    new TelaRelEventosRealizados();
 	    break;
-	case "telaRelUsuariosCadastros":
-	    new telaRelUsuariosCadastros();
+	case "TelaRelUsuariosCadastros":
+	    new TelaRelUsuariosCadastros();
 	    break;
 
 	// Responsável para chamar rotinas de: Sobre;
 
-	case "telaSobreUnifor":
-	    new telaSobreUnifor();
+	case "TelaSobreUnifor":
+	    new TelaSobreUnifor();
 	    break;
 
-	case "telaSobreSistema":
-	    new telaSobreSistema();
+	case "TelaSobreSistema":
+	    new TelaSobreSistema();
 	    break;
-	case "telaVersao":
-	    new telaVersao();
+	case "TelaVersao":
+	    new TelaVersao();
 	    break;
 
 	default:

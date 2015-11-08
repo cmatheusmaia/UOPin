@@ -5,7 +5,7 @@ import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 
-import view.telaVersao;
+import view.TelaVersao;
 
 public class PadroesDeTelas {
 

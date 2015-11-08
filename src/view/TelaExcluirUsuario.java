@@ -14,7 +14,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.SystemColor;
 
-public class telaRelUsuariosCadastros extends JFrame {
+public class TelaExcluirUsuario extends JFrame {
 
 	private JPanel contentPane;
 
@@ -25,7 +25,7 @@ public class telaRelUsuariosCadastros extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telaRelUsuariosCadastros frame = new telaRelUsuariosCadastros();
+					TelaExcluirUsuario frame = new TelaExcluirUsuario();
 					frame.setVisible(true);
 					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
@@ -38,8 +38,8 @@ public class telaRelUsuariosCadastros extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telaRelUsuariosCadastros() {
-		setTitle("RELAT\u00D3RIO DE USU\u00C1RIOS CADASTRADOS - 1.0.1");
+	public TelaExcluirUsuario() {
+		setTitle("EXCLUIR USU\u00C1RIO");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -49,7 +49,7 @@ public class telaRelUsuariosCadastros extends JFrame {
 		JLabel label = new JLabel("VERS\u00C3O DO SISTEMA 1.0.1 - BUILDER 2015");
 		label.setForeground(SystemColor.controlShadow);
 		label.setFont(new Font("Arial", Font.PLAIN, 10));
-		label.setBounds(226, 427, 231, 23);
+		label.setBounds(229, 427, 231, 23);
 		contentPane.add(label);
 	}
 

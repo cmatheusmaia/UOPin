@@ -25,7 +25,7 @@ import javax.swing.JButton;
 import java.awt.Toolkit;
 import javax.swing.SwingConstants;
 
-public class telaCadastroUsuario extends JFrame {
+public class TelaCadastroUsuario extends JFrame {
 
     private JPanel contentPane;
     private JTextField textField;
@@ -42,7 +42,7 @@ public class telaCadastroUsuario extends JFrame {
 	EventQueue.invokeLater(new Runnable() {
 	    public void run() {
 		try {
-		    telaCadastroUsuario frame = new telaCadastroUsuario();
+		    TelaCadastroUsuario frame = new TelaCadastroUsuario();
 		    frame.setVisible(true);
 		    frame.setLocationRelativeTo(null);
 		} catch (Exception e) {
@@ -56,7 +56,7 @@ public class telaCadastroUsuario extends JFrame {
      * Create the frame.
      */
     
-    public telaCadastroUsuario() {
+    public TelaCadastroUsuario() {
 
     	setTitle("CADASTRO DE USUARIO - 1.0.2");
 	
@@ -64,7 +64,7 @@ public class telaCadastroUsuario extends JFrame {
 	setJMenuBar(menuBar);
 	
 	JMenu mnNewMenu = new JMenu("Ajuda");
-	mnNewMenu.setIcon(new ImageIcon(telaCadastroUsuario.class.getResource("/img/Info.png")));
+	mnNewMenu.setIcon(new ImageIcon(TelaCadastroUsuario.class.getResource("/img/Info.png")));
 	menuBar.add(mnNewMenu);
 	
 	JMenuItem mntmNewMenuItem = new JMenuItem("O que mudou?");

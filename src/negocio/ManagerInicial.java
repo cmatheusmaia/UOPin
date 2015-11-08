@@ -5,17 +5,17 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import dao.acesso;
-import view.home;
-import view.telaInicial;
+import view.Home;
+import view.TelaInicial;
 
-public class managerInicial{
+public class ManagerInicial{
 
     public static void entrar(JTextField txtUsuario, JPasswordField txtSenha, JFrame tela) {
 	acesso cl = new acesso();
 	cl.Acesso(txtUsuario.getText(), txtSenha.getText());
 
 	if (cl.acesso == true) {
-	    new home();
+	    new Home();
 	    tela.dispose();
 	    
 	}

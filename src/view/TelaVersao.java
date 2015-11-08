@@ -20,7 +20,7 @@ import javax.swing.ImageIcon;
 import java.awt.Toolkit;
 import java.awt.SystemColor;
 
-public class telaVersao extends JFrame {
+public class TelaVersao extends JFrame {
 
 	private JPanel contentPane;
 
@@ -31,7 +31,7 @@ public class telaVersao extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 		    public void run() {
 			try {
-			    telaCadastroEvento frame = new telaCadastroEvento();
+			    TelaCadastroEvento frame = new TelaCadastroEvento();
 			    frame.setVisible(true);
 			    frame.setLocationRelativeTo(null);
 			} catch (Exception e) {
@@ -44,15 +44,15 @@ public class telaVersao extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telaVersao() {
+	public TelaVersao() {
 	    	setTitle("VERS\u00C3O DO SISTEMA - 1.0.1");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(telaVersao.class.getResource("/img/unifor_logo.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(TelaVersao.class.getResource("/img/unifor_logo.png")));
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
 		JMenu mnAjuda = new JMenu("Ajuda");
-		mnAjuda.setIcon(new ImageIcon(telaVersao.class.getResource("/img/Info.png")));
+		mnAjuda.setIcon(new ImageIcon(TelaVersao.class.getResource("/img/Info.png")));
 		menuBar.add(mnAjuda);
 		
 		JMenuItem mntmOQueMudou = new JMenuItem("O que mudou?");

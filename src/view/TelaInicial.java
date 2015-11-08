@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 
-import negocio.managerInicial;
+import negocio.ManagerInicial;
 
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
@@ -21,7 +21,7 @@ import java.awt.Toolkit;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class telaInicial {
+public class TelaInicial {
 
     protected JFrame frmUniforFerramenta;
     protected static JTextField txtUsuario;
@@ -34,7 +34,7 @@ public class telaInicial {
 	EventQueue.invokeLater(new Runnable() {
 	    public void run() {
 		try {
-		    telaInicial window = new telaInicial();
+		    TelaInicial window = new TelaInicial();
 		    window.frmUniforFerramenta.setLocationRelativeTo(null);
 		} catch (Exception e) {
 		    e.printStackTrace();
@@ -46,7 +46,7 @@ public class telaInicial {
     /**
      * Create the application.
      */
-    public telaInicial() {
+    public TelaInicial() {
 	initialize();
     }
 
@@ -57,13 +57,13 @@ public class telaInicial {
 	frmUniforFerramenta = new JFrame();
 	frmUniforFerramenta.setResizable(false);
 	frmUniforFerramenta.setIconImage(
-		Toolkit.getDefaultToolkit().getImage(telaInicial.class.getResource("/img/unifor_logo.png")));
+		Toolkit.getDefaultToolkit().getImage(TelaInicial.class.getResource("/img/unifor_logo.png")));
 	frmUniforFerramenta.getContentPane().setBackground(SystemColor.textHighlightText);
 	frmUniforFerramenta.getContentPane().setLayout(null);
 	frmUniforFerramenta.setVisible(true);
-
+	
 	JLabel lblNewLabel = new JLabel("New label");
-	lblNewLabel.setIcon(new ImageIcon(telaInicial.class.getResource("/img/UNIFOR_Logo_21.gif")));
+	lblNewLabel.setIcon(new ImageIcon(TelaInicial.class.getResource("/img/UNIFOR_Logo_21.gif")));
 	lblNewLabel.setBounds(0, 38, 337, 233);
 	frmUniforFerramenta.getContentPane().add(lblNewLabel);
 
@@ -81,13 +81,14 @@ public class telaInicial {
 	txtUsuario.setColumns(10);
 
 	txtSenha = new JPasswordField();
+	
 	txtSenha.setBounds(131, 320, 136, 20);
 	frmUniforFerramenta.getContentPane().add(txtSenha);
 
 	JButton btnNewButton = new JButton("ENTRAR");
 	btnNewButton.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
-		managerInicial.entrar(txtUsuario, txtSenha, frmUniforFerramenta);
+		ManagerInicial.entrar(txtUsuario, txtSenha, frmUniforFerramenta);
 	    }
 	});
 	btnNewButton.setBounds(82, 351, 89, 32);
@@ -96,7 +97,7 @@ public class telaInicial {
 	JButton btnNewButton_1 = new JButton("SAIR");
 	btnNewButton_1.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent arg0) {
-		negocio.managerSairDoSistema.sair();
+		negocio.ManagerSairDoSistema.sair();
 	    }
 	});
 	btnNewButton_1.setBounds(178, 351, 89, 32);
@@ -111,5 +112,6 @@ public class telaInicial {
 	frmUniforFerramenta.setTitle("UNIFOR - FERRAMENTA DE GEST\u00C3O");
 	frmUniforFerramenta.setBounds(100, 100, 357, 495);
 	frmUniforFerramenta.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frmUniforFerramenta.getRootPane().setDefaultButton(btnNewButton);
     }
 }

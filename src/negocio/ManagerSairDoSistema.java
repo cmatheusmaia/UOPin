@@ -2,7 +2,7 @@ package negocio;
 
 import javax.swing.JOptionPane;
 
-public class managerSairDoSistema {
+public class ManagerSairDoSistema {
 
 	public static void sair() {
 		

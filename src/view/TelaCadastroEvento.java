@@ -29,7 +29,7 @@ import javax.swing.JTextPane;
 import javax.swing.JEditorPane;
 import javax.swing.JFormattedTextField;
 
-public class telaCadastroEvento extends JFrame {
+public class TelaCadastroEvento extends JFrame {
 
     private JPanel contentPane;
     private JTextField textField_3;
@@ -47,7 +47,7 @@ public class telaCadastroEvento extends JFrame {
 	EventQueue.invokeLater(new Runnable() {
 	    public void run() {
 		try {
-		    telaCadastroEvento frame = new telaCadastroEvento();
+		    TelaCadastroEvento frame = new TelaCadastroEvento();
 		    frame.setLocationRelativeTo(null);
 		    frame.setVisible(true);
 		} catch (Exception e) {
@@ -60,14 +60,14 @@ public class telaCadastroEvento extends JFrame {
     /**
      * Create the frame.
      */
-    public telaCadastroEvento() {
+    public TelaCadastroEvento() {
 	setTitle("CADASTRO DE EVENTO - 1.0.1");
 	
 	JMenuBar menuBar = new JMenuBar();
 	setJMenuBar(menuBar);
 	
 	JMenu mnNewMenu = new JMenu("Ajuda");
-	mnNewMenu.setIcon(new ImageIcon(telaCadastroEvento.class.getResource("/img/Info.png")));
+	mnNewMenu.setIcon(new ImageIcon(TelaCadastroEvento.class.getResource("/img/Info.png")));
 	menuBar.add(mnNewMenu);
 	
 	JMenuItem mntmNewMenuItem = new JMenuItem("O que mudou?");

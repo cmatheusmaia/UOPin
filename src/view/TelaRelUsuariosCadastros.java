@@ -14,7 +14,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.SystemColor;
 
-public class telaEditarEstabelecimento extends JFrame {
+public class TelaRelUsuariosCadastros extends JFrame {
 
 	private JPanel contentPane;
 
@@ -25,7 +25,7 @@ public class telaEditarEstabelecimento extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telaEditarEstabelecimento frame = new telaEditarEstabelecimento();
+					TelaRelUsuariosCadastros frame = new TelaRelUsuariosCadastros();
 					frame.setVisible(true);
 					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
@@ -38,8 +38,8 @@ public class telaEditarEstabelecimento extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telaEditarEstabelecimento() {
-		setTitle("EDITAR ESTABELECIMENTO - 1.0.1");
+	public TelaRelUsuariosCadastros() {
+		setTitle("RELAT\u00D3RIO DE USU\u00C1RIOS CADASTRADOS - 1.0.1");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -49,7 +49,7 @@ public class telaEditarEstabelecimento extends JFrame {
 		JLabel label = new JLabel("VERS\u00C3O DO SISTEMA 1.0.1 - BUILDER 2015");
 		label.setForeground(SystemColor.controlShadow);
 		label.setFont(new Font("Arial", Font.PLAIN, 10));
-		label.setBounds(236, 437, 231, 23);
+		label.setBounds(226, 427, 231, 23);
 		contentPane.add(label);
 	}
 

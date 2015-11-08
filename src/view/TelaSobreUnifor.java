@@ -15,7 +15,7 @@ import java.awt.Font;
 import java.awt.SystemColor;
 import javax.swing.ImageIcon;
 
-public class telaSobreUnifor extends JFrame {
+public class TelaSobreUnifor extends JFrame {
 
 	private JPanel contentPane;
 
@@ -26,7 +26,7 @@ public class telaSobreUnifor extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telaSobreUnifor frame = new telaSobreUnifor();
+					TelaSobreUnifor frame = new TelaSobreUnifor();
 					frame.setVisible(true);
 					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
@@ -39,7 +39,7 @@ public class telaSobreUnifor extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telaSobreUnifor() {
+	public TelaSobreUnifor() {
 		setTitle("UNIFOR ONLINE - 1.0.1");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
@@ -54,7 +54,7 @@ public class telaSobreUnifor extends JFrame {
 		contentPane.add(label);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(telaSobreUnifor.class.getResource("/img/unifor.gif")));
+		lblNewLabel.setIcon(new ImageIcon(TelaSobreUnifor.class.getResource("/img/unifor.gif")));
 		lblNewLabel.setBounds(224, 21, 257, 86);
 		contentPane.add(lblNewLabel);
 		

@@ -13,8 +13,11 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.SystemColor;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
-public class telaExcluirEstabelecimento extends JFrame {
+public class TelaEditarEvento extends JFrame {
 
 	private JPanel contentPane;
 
@@ -25,7 +28,7 @@ public class telaExcluirEstabelecimento extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telaExcluirEstabelecimento frame = new telaExcluirEstabelecimento();
+					TelaEditarEvento frame = new TelaEditarEvento();
 					frame.setVisible(true);
 					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
@@ -38,8 +41,8 @@ public class telaExcluirEstabelecimento extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telaExcluirEstabelecimento() {
-		setTitle("EXCLUIR ESTABELECIMENTO - 1.0.1");
+	public TelaEditarEvento() {
+		setTitle("EDITAR EVENTO - 1.0.1");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -49,8 +52,17 @@ public class telaExcluirEstabelecimento extends JFrame {
 		JLabel label = new JLabel("VERS\u00C3O DO SISTEMA 1.0.1 - BUILDER 2015");
 		label.setForeground(SystemColor.controlShadow);
 		label.setFont(new Font("Arial", Font.PLAIN, 10));
-		label.setBounds(241, 427, 231, 23);
+		label.setBounds(231, 437, 231, 23);
 		contentPane.add(label);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 694, 21);
+		contentPane.add(menuBar);
+		
+		JMenu menu = new JMenu("Ajuda");
+		menuBar.add(menu);
+		
+		JMenuItem menuItem = new JMenuItem("O que mudou?");
+		menu.add(menuItem);
 	}
-
 }
