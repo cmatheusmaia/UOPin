@@ -16,6 +16,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.SoftBevelBorder;
 
 import negocio.ChamarTelas;
+import negocio.ControleDeAcesso;
 import negocio.ManagerSairDoSistema;
 
 import java.awt.Font;
@@ -27,9 +28,10 @@ import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Home{
+public class Home {
 
     private JFrame frmUniforFerramenta;
+
     /**
      * Launch the application.
      */
@@ -61,7 +63,8 @@ public class Home{
 
 	frmUniforFerramenta = new JFrame();
 	frmUniforFerramenta.setResizable(false);
-	frmUniforFerramenta.setIconImage(Toolkit.getDefaultToolkit().getImage(Home.class.getResource("/img/unifor_logo.png")));
+	frmUniforFerramenta
+		.setIconImage(Toolkit.getDefaultToolkit().getImage(Home.class.getResource("/img/unifor_logo.png")));
 	frmUniforFerramenta.setTitle("UNIFOR - FERRAMENTA DE GEST\u00C3O - 1.0.1");
 	frmUniforFerramenta.getContentPane().setBackground(Color.WHITE);
 	frmUniforFerramenta.setBounds(100, 100, 700, 500);
@@ -91,9 +94,9 @@ public class Home{
 
 	JMenuItem mntmSair = new JMenuItem("Sair");
 	mntmSair.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent arg0) {			
-			ManagerSairDoSistema.sair();
-		}
+	    public void actionPerformed(ActionEvent arg0) {
+		ManagerSairDoSistema.sair();
+	    }
 	});
 	mntmSair.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmSair.setIcon(new ImageIcon(Home.class.getResource("/img/Exit.png")));
@@ -111,9 +114,10 @@ public class Home{
 
 	JMenuItem mntmEstabelecimentoAdicionar = new JMenuItem("Adicionar");
 	mntmEstabelecimentoAdicionar.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir(new TelaCadastroEstabelecimento());
-		}
+	    public void actionPerformed(ActionEvent e) {
+		if (ControleDeAcesso.empresarioEAdministrador())
+		    ChamarTelas.abrir(new TelaCadastroEstabelecimento());
+	    }
 	});
 	mntmEstabelecimentoAdicionar.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmEstabelecimentoAdicionar.setIcon(new ImageIcon(Home.class.getResource("/img/Create.png")));
@@ -121,10 +125,11 @@ public class Home{
 
 	JMenuItem mntmEstabelecimentoEditar = new JMenuItem("Editar");
 	mntmEstabelecimentoEditar.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir(new TelaEditarEstabelecimento());
-			
-		}
+	    public void actionPerformed(ActionEvent e) {
+		if (ControleDeAcesso.empresarioEAdministrador())
+		    ChamarTelas.abrir(new TelaEditarEstabelecimento());
+
+	    }
 	});
 	mntmEstabelecimentoEditar.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmEstabelecimentoEditar.setIcon(new ImageIcon(Home.class.getResource("/img/Redo.png")));
@@ -132,9 +137,10 @@ public class Home{
 
 	JMenuItem mntmEstabelecimentoExcluir = new JMenuItem("Excluir");
 	mntmEstabelecimentoExcluir.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir(new TelaExcluirEstabelecimento());
-		}
+	    public void actionPerformed(ActionEvent e) {
+		if (ControleDeAcesso.administrador())
+		    ChamarTelas.abrir(new TelaExcluirEstabelecimento());
+	    }
 	});
 	mntmEstabelecimentoExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmEstabelecimentoExcluir.setIcon(new ImageIcon(Home.class.getResource("/img/Company.png")));
@@ -147,9 +153,10 @@ public class Home{
 
 	JMenuItem mntmEventoAdcionar = new JMenuItem("Adcionar");
 	mntmEventoAdcionar.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
+	    public void actionPerformed(ActionEvent e) {
+		if (ControleDeAcesso.funcionarioEmpresarioEAdministrador())
 		    ChamarTelas.abrir(new TelaCadastroEvento());
-		}
+	    }
 	});
 	mntmEventoAdcionar.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmEventoAdcionar.setIcon(new ImageIcon(Home.class.getResource("/img/Create.png")));
@@ -157,9 +164,10 @@ public class Home{
 
 	JMenuItem mntmEventoEditar = new JMenuItem("Editar");
 	mntmEventoEditar.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir(new TelaEditarEvento());
-		}
+	    public void actionPerformed(ActionEvent e) {
+		if (ControleDeAcesso.funcionarioEmpresarioEAdministrador())
+		    ChamarTelas.abrir(new TelaEditarEvento());
+	    }
 	});
 	mntmEventoEditar.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmEventoEditar.setIcon(new ImageIcon(Home.class.getResource("/img/Redo.png")));
@@ -167,9 +175,10 @@ public class Home{
 
 	JMenuItem mntmEventoExcluir = new JMenuItem("Excluir");
 	mntmEventoExcluir.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir(new TelaExcluirEvento());
-		}
+	    public void actionPerformed(ActionEvent e) {
+		if (ControleDeAcesso.empresarioEAdministrador())
+		    ChamarTelas.abrir(new TelaExcluirEvento());
+	    }
 	});
 	mntmEventoExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmEventoExcluir.setIcon(new ImageIcon(Home.class.getResource("/img/Delete.png")));
@@ -182,9 +191,10 @@ public class Home{
 
 	JMenuItem mntmUsuarioAdicionar = new JMenuItem("Adicionar");
 	mntmUsuarioAdicionar.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
+	    public void actionPerformed(ActionEvent e) {
+		if (ControleDeAcesso.administrador())
 		    ChamarTelas.abrir(new TelaCadastroUsuario());
-		}
+	    }
 	});
 	mntmUsuarioAdicionar.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmUsuarioAdicionar.setIcon(new ImageIcon(Home.class.getResource("/img/Create.png")));
@@ -192,9 +202,10 @@ public class Home{
 
 	JMenuItem mntmUsuarioEditar = new JMenuItem("Editar");
 	mntmUsuarioEditar.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir(new TelaEditarUsuario());
-		}
+	    public void actionPerformed(ActionEvent e) {
+		if (ControleDeAcesso.administrador())
+		    ChamarTelas.abrir(new TelaEditarUsuario());
+	    }
 	});
 	mntmUsuarioEditar.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmUsuarioEditar.setIcon(new ImageIcon(Home.class.getResource("/img/Redo.png")));
@@ -202,9 +213,10 @@ public class Home{
 
 	JMenuItem mntmUsuarioExcluir = new JMenuItem("Excluir");
 	mntmUsuarioExcluir.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir(new TelaExcluirUsuario());
-		}
+	    public void actionPerformed(ActionEvent e) {
+		if (ControleDeAcesso.administrador())
+		    ChamarTelas.abrir(new TelaExcluirUsuario());
+	    }
 	});
 	mntmUsuarioExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmUsuarioExcluir.setIcon(new ImageIcon(Home.class.getResource("/img/Delete.png")));
@@ -217,9 +229,10 @@ public class Home{
 
 	JMenuItem mntmRelatorioUltimosEventosRealizados = new JMenuItem("\u00DAltimos eventos realizados");
 	mntmRelatorioUltimosEventosRealizados.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir(new TelaRelEventosRealizados());
-		}
+	    public void actionPerformed(ActionEvent e) {
+		if (ControleDeAcesso.funcionarioEmpresarioEAdministrador())
+		    ChamarTelas.abrir(new TelaRelEventosRealizados());
+	    }
 	});
 	mntmRelatorioUltimosEventosRealizados.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmRelatorioUltimosEventosRealizados.setIcon(new ImageIcon(Home.class.getResource("/img/Text_preview.png")));
@@ -227,12 +240,14 @@ public class Home{
 
 	JMenuItem mntmRelatorioUltimosEventosUsuariosCadastrados = new JMenuItem("Usu\u00E1rios cadastrados");
 	mntmRelatorioUltimosEventosUsuariosCadastrados.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir(new TelaRelUsuariosCadastros());
-		}
+	    public void actionPerformed(ActionEvent e) {
+		if (ControleDeAcesso.administrador())
+		    ChamarTelas.abrir(new TelaRelUsuariosCadastros());
+	    }
 	});
 	mntmRelatorioUltimosEventosUsuariosCadastrados.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmRelatorioUltimosEventosUsuariosCadastrados.setIcon(new ImageIcon(Home.class.getResource("/img/Text_preview.png")));
+	mntmRelatorioUltimosEventosUsuariosCadastrados
+		.setIcon(new ImageIcon(Home.class.getResource("/img/Text_preview.png")));
 	mnNewMenu_2.add(mntmRelatorioUltimosEventosUsuariosCadastrados);
 
 	JMenu mnNewMenu_3 = new JMenu("Sobre");
@@ -242,9 +257,10 @@ public class Home{
 
 	JMenuItem mntmSobreUniforOnline = new JMenuItem("Unifor Online");
 	mntmSobreUniforOnline.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir(new TelaSobreUnifor());
-		}
+	    public void actionPerformed(ActionEvent e) {
+		if (ControleDeAcesso.funcionarioEmpresarioEAdministrador())
+		    ChamarTelas.abrir(new TelaSobreUnifor());
+	    }
 	});
 	mntmSobreUniforOnline.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmSobreUniforOnline.setIcon(new ImageIcon(Home.class.getResource("/img/Info.png")));
@@ -252,9 +268,10 @@ public class Home{
 
 	JMenuItem mntmSobreOSistema = new JMenuItem("Sobre o sistema");
 	mntmSobreOSistema.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			ChamarTelas.abrir(new TelaSobreSistema());
-		}
+	    public void actionPerformed(ActionEvent e) {
+		if (ControleDeAcesso.funcionarioEmpresarioEAdministrador())
+		    ChamarTelas.abrir(new TelaSobreSistema());
+	    }
 	});
 	mntmSobreOSistema.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmSobreOSistema.setIcon(new ImageIcon(Home.class.getResource("/img/Info.png")));
@@ -262,9 +279,10 @@ public class Home{
 
 	JMenuItem mntmSobreVersao = new JMenuItem("Vers\u00E3o");
 	mntmSobreVersao.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent arg0) {
-			ChamarTelas.abrir(new TelaVersao());
-		}
+	    public void actionPerformed(ActionEvent arg0) {
+		if (ControleDeAcesso.funcionarioEmpresarioEAdministrador())
+		    ChamarTelas.abrir(new TelaVersao());
+	    }
 	});
 	mntmSobreVersao.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmSobreVersao.setIcon(new ImageIcon(Home.class.getResource("/img/Info.png")));
