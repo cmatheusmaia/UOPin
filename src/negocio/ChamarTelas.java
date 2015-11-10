@@ -20,53 +20,68 @@ public class ChamarTelas {
 
 	switch (tela.toString()) {
 	case "TelaCadastrarEvento":
-	    new TelaCadastroEvento();
+	    if (ControleDeAcesso.funcionarioEmpresarioEAdministrador())
+		new TelaCadastroEvento();
 	    break;
 	case "TelaExcluirEvento":
+	    if (ControleDeAcesso.empresarioEAdministrador())
+		new TelaCadastroEvento();
 	    new TelaExcluirEvento();
 	    break;
 	case "TelaEditarEvento":
-	    new TelaEditarEvento();
+	    if (ControleDeAcesso.empresarioEAdministrador())
+		new TelaEditarEvento();
 	    break;
 	case "TelaCadastrarUsuario":
-	    new TelaCadastroUsuario();
+	    if (ControleDeAcesso.administrador())
+		new TelaCadastroUsuario();
 	    break;
 	case "TelaEditarUsuario":
-	    new TelaEditarUsuario();
+	    if (ControleDeAcesso.administrador())
+		new TelaEditarUsuario();
 	    break;
 	case "TelaExcluirUsuario":
-	    new TelaExcluirUsuario();
+	    if (ControleDeAcesso.administrador())
+		new TelaExcluirUsuario();
 	    break;
 	case "TelaCadastrarEstabelecimento":
-	    new TelaCadastroEstabelecimento();
+	    if (ControleDeAcesso.empresarioEAdministrador())
+		new TelaCadastroEstabelecimento();
 	    break;
 	case "TelaEditarEstabelecimento":
-	    new TelaEditarEstabelecimento();
+	    if (ControleDeAcesso.empresarioEAdministrador())
+		new TelaEditarEstabelecimento();
 	    break;
 	case "TelaExcluirEstabelecimento":
-	    new TelaExcluirEstabelecimento();
+	    if (ControleDeAcesso.administrador())
+		new TelaExcluirEstabelecimento();
 	    break;
 
 	// Responsável para chamar rotinas de: Relatórios;
 
 	case "TelaRelEventosRealizados":
-	    new TelaRelEventosRealizados();
+	    if (ControleDeAcesso.funcionarioEmpresarioEAdministrador())
+		new TelaRelEventosRealizados();
 	    break;
 	case "TelaRelUsuariosCadastros":
-	    new TelaRelUsuariosCadastros();
+	    if (ControleDeAcesso.funcionarioEmpresarioEAdministrador())
+		new TelaRelUsuariosCadastros();
 	    break;
 
 	// Responsável para chamar rotinas de: Sobre;
 
 	case "TelaSobreUnifor":
-	    new TelaSobreUnifor();
+	    if (ControleDeAcesso.funcionarioEmpresarioEAdministrador())
+		new TelaSobreUnifor();
 	    break;
 
 	case "TelaSobreSistema":
-	    new TelaSobreSistema();
+	    if (ControleDeAcesso.funcionarioEmpresarioEAdministrador())
+		new TelaSobreSistema();
 	    break;
 	case "TelaVersao":
-	    new TelaVersao();
+	    if (ControleDeAcesso.funcionarioEmpresarioEAdministrador())
+		new TelaVersao();
 	    break;
 
 	default:
