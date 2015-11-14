@@ -13,7 +13,7 @@ public class acesso {
 
     public boolean acesso;
 
-    public void Acesso(String login, String senha) {
+    public void Acesso(String Nome, String Senha) {
 
 	Connection controleAcesso = null;
 	Statement consulta = null;
@@ -32,20 +32,20 @@ public class acesso {
 	    consultaAdm = (Statement) controleAcesso.createStatement();
 	    consultaEmp = (Statement) controleAcesso.createStatement();
 	    consultaFun = (Statement) controleAcesso.createStatement();
-	    tabela = consulta.executeQuery(
-		    "select login, senha from usuario where login='" + login + "'and senha='" + senha + "'");
+	    tabela = consulta
+		    .executeQuery("select Nome, Senha from usuario where Nome='" + Nome + "'and Senha='" + Senha + "'");
 	    administrador = consultaAdm.executeQuery(
-		    "select login, perfilusuario from usuario where login='" + login + "'and perfilusuario='1'");
+		    "select Nome, Perfil_Usuario_idPerfil_Usuario from usuario where Nome='" + Nome + "'and Perfil_Usuario_idPerfil_Usuario='1'");
 	    empresario = consultaEmp.executeQuery(
-		    "select login, perfilusuario from usuario where login='" + login + "'and perfilusuario='2'");
+		    "select Nome, Perfil_Usuario_idPerfil_Usuario from usuario where Nome='" + Nome + "'and Perfil_Usuario_idPerfil_Usuario='2'");
 	    funcionario = consultaFun.executeQuery(
-		    "select login, perfilusuario from usuario where login='" + login + "'and perfilusuario='3'");
+		    "select Nome, Perfil_Usuario_idPerfil_Usuario from usuario where Nome='" + Nome + "'and Perfil_Usuario_idPerfil_Usuario='3'");
 
 	    if (tabela.next()) {
 		JOptionPane.showMessageDialog(null, "Acesso autorizado");
 		acesso = true;
 	    } else {
-		JOptionPane.showMessageDialog(null, "Usuário e senha inválido");
+		JOptionPane.showMessageDialog(null, "Usuário e Senha inválido");
 		acesso = false;
 	    }
 
