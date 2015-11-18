@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 import negocio.ControleDeAcesso;
 
-public class acesso {
+public class Acesso {
 
     public boolean acesso;
 
