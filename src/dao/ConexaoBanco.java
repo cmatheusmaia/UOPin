@@ -2,7 +2,9 @@ package dao;
 import java.sql.*;
 
 import com.mysql.jdbc.Statement;
-public class conexaoBanco {
+
+
+public class ConexaoBanco {
 	
 	public static Connection getConnection(){
 		Connection connection = null;
@@ -24,6 +26,10 @@ public class conexaoBanco {
 	public static Statement createStatement() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public void fecharBDConn() {
+		// TODO Auto-generated method stub
 	}
 
 }
