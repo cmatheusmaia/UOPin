@@ -165,7 +165,7 @@ public class TelaCadastroUsuario extends JFrame {
 	JButton btnCadastrar = new JButton("Cadastrar");
 	btnCadastrar.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent e) {
-		ManagerCadastroUsuario.salvarDados(textField_Nome.toString(), passSenha.getText(), comboBox_Perfil.getSelectedIndex(), textField_Dt_nascimento.toString(), comboBox_Sexo.getSelectedIndex(), textField_Nome_completo.toString());
+		ManagerCadastroUsuario.salvarDados(textField_Nome.getText(), passSenha.getText(), comboBox_Perfil.getSelectedIndex(), textField_Dt_nascimento.getText(), comboBox_Sexo.getSelectedIndex(), textField_Nome_completo.getText());
 	    }
 	});
 	btnCadastrar.setBounds(182, 297, 131, 31);

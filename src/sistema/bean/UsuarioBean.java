@@ -13,12 +13,12 @@ public class UsuarioBean {
     public UsuarioBean(String nome, String senha, int perfil_Usuario_idPerfil_Usuario, String dt_nascimento,
 	    int sexo_idSexo, String nomeCompleto) {
 	super();
-	this.nome = nome;
+	this.nome = nome.toString();
 	this.senha = senha;
 	this.perfil_Usuario_idPerfil_Usuario = perfil_Usuario_idPerfil_Usuario;
-	this.dt_nascimento = dt_nascimento;
+	this.dt_nascimento = dt_nascimento.toString();
 	this.sexo_idSexo = sexo_idSexo;
-	this.nomeCompleto = nomeCompleto;
+	this.nomeCompleto = nomeCompleto.toString();
     }
 
     public int getIdUsuario() {
