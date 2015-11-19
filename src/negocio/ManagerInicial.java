@@ -13,7 +13,6 @@ public class ManagerInicial{
     public static void entrar(JTextField txtUsuario, JPasswordField txtSenha, JFrame tela) {
 	Acesso cl = new Acesso();
 	cl.Acesso(txtUsuario.getText(), txtSenha.getText());
-
 	if (cl.acesso == true) {
 	    new Home();
 	    tela.dispose();

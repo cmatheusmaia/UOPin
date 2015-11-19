@@ -81,7 +81,6 @@ public class TelaInicial {
 	txtUsuario.setColumns(10);
 
 	txtSenha = new JPasswordField();
-	
 	txtSenha.setBounds(131, 320, 136, 20);
 	frmUniforFerramenta.getContentPane().add(txtSenha);
 

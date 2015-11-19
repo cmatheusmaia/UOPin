@@ -3,79 +3,77 @@ package sistema.bean;
 public class EstabelecimentoBean {
 
     private String nome;
-	private String cnpj;
-	private String telefone;
-	private String ramodeatividade;
-	private String endereconocampus;
-	private String proprietario;
-	private String horariodefuncionamento;
-	
-	private int codigo;
+    private String cnpj;
+    private String telefone;
+    private String ramodeatividade;
+    private String endereconocampus;
+    private String proprietario;
+    private String horariodefuncionamento;
 
-	public String getNome() {
-		return nome;
-	}
+    private int codigo;
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public String getNome() {
+	return nome;
+    }
 
-	public String getCnpj() {
-		return cnpj;
-	}
+    public void setNome(String nome) {
+	this.nome = nome;
+    }
 
-	public void setCnpj(String cnpj) {
-		this.cnpj = cnpj;
-	}
+    public String getCnpj() {
+	return cnpj;
+    }
 
-	public String getTelefone() {
-		return telefone;
-	}
+    public void setCnpj(String cnpj) {
+	this.cnpj = cnpj;
+    }
 
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
+    public String getTelefone() {
+	return telefone;
+    }
 
-	public String getRamodeatividade() {
-		return ramodeatividade;
-	}
+    public void setTelefone(String telefone) {
+	this.telefone = telefone;
+    }
 
-	public void setRamodeatividade(String ramodeatividade) {
-		this.ramodeatividade = ramodeatividade;
-	}
+    public String getRamodeatividade() {
+	return ramodeatividade;
+    }
 
-	public String getEndereconocampus() {
-		return endereconocampus;
-	}
+    public void setRamodeatividade(String ramodeatividade) {
+	this.ramodeatividade = ramodeatividade;
+    }
 
-	public void setEndereconocampus(String endereconocampus) {
-		this.endereconocampus = endereconocampus;
-	}
+    public String getEndereconocampus() {
+	return endereconocampus;
+    }
 
-	public String getProprietario() {
-		return proprietario;
-	}
+    public void setEndereconocampus(String endereconocampus) {
+	this.endereconocampus = endereconocampus;
+    }
 
-	public void setProprietario(String proprietario) {
-		this.proprietario = proprietario;
-	}
+    public String getProprietario() {
+	return proprietario;
+    }
 
-	public String getHorariodefuncionamento() {
-		return horariodefuncionamento;
-	}
+    public void setProprietario(String proprietario) {
+	this.proprietario = proprietario;
+    }
 
-	public void setHorariodefuncionamento(String horariodefuncionamento) {
-		this.horariodefuncionamento = horariodefuncionamento;
-	}
+    public String getHorariodefuncionamento() {
+	return horariodefuncionamento;
+    }
 
-	public int getCodigo() {
-		return codigo;
-	}
+    public void setHorariodefuncionamento(String horariodefuncionamento) {
+	this.horariodefuncionamento = horariodefuncionamento;
+    }
 
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
-	}
-	
-	
-    
+    public int getCodigo() {
+	return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+	this.codigo = codigo;
+    }
+
 }
