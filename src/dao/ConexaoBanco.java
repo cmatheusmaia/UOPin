@@ -6,7 +6,7 @@ import com.mysql.jdbc.Statement;
 
 public class ConexaoBanco {
 	
-	public static Connection getConnection(){
+	public Connection getConnection(){
 		Connection connection = null;
 		try{
 			Class.forName("com.mysql.jdbc.Driver");

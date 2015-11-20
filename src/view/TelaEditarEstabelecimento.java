@@ -1,31 +1,19 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import negocio.PadroesDeTelas;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.SystemColor;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import negocio.PadroesDeTelas;
 import dao.InseriEstabelecimento;
 import sistema.bean.EstabelecimentoBean;
-import java.awt.Color;
-import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
-import java.awt.Font;
-import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextField;
@@ -160,6 +148,9 @@ public class TelaEditarEstabelecimento extends JFrame {
 	JButton btnAlterar = new JButton("ATUALIZAR");
 	btnAlterar.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent arg0) {
+	    	InsereDados.AtualizarDados(jtfNome.getText(), jtfCnpj.getText(), jtfTelefone.getText(),
+					jtfRamoDeAtividade.getText(), jtfEnderecoNoCampus.getText(), jtfProprietario.getText(), jtfHorarioDeFuncionamento.getText(),
+					EstBin);
 	    }
 	});
 	btnAlterar.setBounds(190, 345, 106, 23);
