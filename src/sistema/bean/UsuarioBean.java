@@ -21,6 +21,10 @@ public class UsuarioBean {
 	this.nomeCompleto = nomeCompleto.toString();
     }
 
+    public UsuarioBean() {
+	// TODO Auto-generated constructor stub
+    }
+
     public int getIdUsuario() {
         return idUsuario;
     }

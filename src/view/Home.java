@@ -106,45 +106,44 @@ public class Home {
 	mnNewMenu_1.setFont(new Font("Arial", Font.PLAIN, 12));
 	mnNewMenu_1.setIcon(new ImageIcon(Home.class.getResource("/img/Create.png")));
 	menuBar.add(mnNewMenu_1);
-
-	JMenu mnEstabelecimento = new JMenu("Estabelecimento");
-	mnEstabelecimento.setFont(new Font("Arial", Font.PLAIN, 12));
-	mnEstabelecimento.setIcon(new ImageIcon(Home.class.getResource("/img/Company.png")));
-	mnNewMenu_1.add(mnEstabelecimento);
-
-	JMenuItem mntmEstabelecimentoAdicionar = new JMenuItem("Adicionar");
-	mntmEstabelecimentoAdicionar.addActionListener(new ActionListener() {
-	    public void actionPerformed(ActionEvent e) {
-		if (ControleDeAcesso.empresarioEAdministrador())
-		    ChamarTelas.abrir(new TelaCadastroEstabelecimento());
-	    }
-	});
-	mntmEstabelecimentoAdicionar.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmEstabelecimentoAdicionar.setIcon(new ImageIcon(Home.class.getResource("/img/Create.png")));
-	mnEstabelecimento.add(mntmEstabelecimentoAdicionar);
-
-	JMenuItem mntmEstabelecimentoEditar = new JMenuItem("Editar");
-	mntmEstabelecimentoEditar.addActionListener(new ActionListener() {
-	    public void actionPerformed(ActionEvent e) {
-		if (ControleDeAcesso.empresarioEAdministrador())
-		    ChamarTelas.abrir(new TelaEditarEstabelecimento());
-
-	    }
-	});
-	mntmEstabelecimentoEditar.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmEstabelecimentoEditar.setIcon(new ImageIcon(Home.class.getResource("/img/Redo.png")));
-	mnEstabelecimento.add(mntmEstabelecimentoEditar);
-
-	JMenuItem mntmEstabelecimentoExcluir = new JMenuItem("Excluir");
-	mntmEstabelecimentoExcluir.addActionListener(new ActionListener() {
-	    public void actionPerformed(ActionEvent e) {
-		if (ControleDeAcesso.administrador())
-		    ChamarTelas.abrir(new TelaExcluirEstabelecimento());
-	    }
-	});
-	mntmEstabelecimentoExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmEstabelecimentoExcluir.setIcon(new ImageIcon(Home.class.getResource("/img/Company.png")));
-	mnEstabelecimento.add(mntmEstabelecimentoExcluir);
+	
+		JMenu mnUsuario = new JMenu("Usu\u00E1rio");
+		mnUsuario.setFont(new Font("Arial", Font.PLAIN, 12));
+		mnUsuario.setIcon(new ImageIcon(Home.class.getResource("/img/People.png")));
+		mnNewMenu_1.add(mnUsuario);
+		
+			JMenuItem mntmUsuarioAdicionar = new JMenuItem("Adicionar");
+			mntmUsuarioAdicionar.addActionListener(new ActionListener() {
+			    public void actionPerformed(ActionEvent e) {
+				if (ControleDeAcesso.administrador())
+				    ChamarTelas.abrir(new TelaCadastroUsuario());
+			    }
+			});
+			mntmUsuarioAdicionar.setFont(new Font("Arial", Font.PLAIN, 12));
+			mntmUsuarioAdicionar.setIcon(new ImageIcon(Home.class.getResource("/img/Create.png")));
+			mnUsuario.add(mntmUsuarioAdicionar);
+			
+				JMenuItem mntmUsuarioEditar = new JMenuItem("Editar");
+				mntmUsuarioEditar.addActionListener(new ActionListener() {
+				    public void actionPerformed(ActionEvent e) {
+					if (ControleDeAcesso.administrador())
+					    ChamarTelas.abrir(new TelaEditarUsuario());
+				    }
+				});
+				mntmUsuarioEditar.setFont(new Font("Arial", Font.PLAIN, 12));
+				mntmUsuarioEditar.setIcon(new ImageIcon(Home.class.getResource("/img/Redo.png")));
+				mnUsuario.add(mntmUsuarioEditar);
+				
+					JMenuItem mntmUsuarioExcluir = new JMenuItem("Excluir");
+					mntmUsuarioExcluir.addActionListener(new ActionListener() {
+					    public void actionPerformed(ActionEvent e) {
+						if (ControleDeAcesso.administrador())
+						    ChamarTelas.abrir(new TelaExcluirUsuario());
+					    }
+					});
+					mntmUsuarioExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
+					mntmUsuarioExcluir.setIcon(new ImageIcon(Home.class.getResource("/img/Delete.png")));
+					mnUsuario.add(mntmUsuarioExcluir);
 
 	JMenu mnEvento = new JMenu("Evento");
 	mnEvento.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -183,44 +182,45 @@ public class Home {
 	mntmEventoExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
 	mntmEventoExcluir.setIcon(new ImageIcon(Home.class.getResource("/img/Delete.png")));
 	mnEvento.add(mntmEventoExcluir);
+	
+		JMenu mnEstabelecimento = new JMenu("Estabelecimento");
+		mnEstabelecimento.setFont(new Font("Arial", Font.PLAIN, 12));
+		mnEstabelecimento.setIcon(new ImageIcon(Home.class.getResource("/img/Company.png")));
+		mnNewMenu_1.add(mnEstabelecimento);
+		
+			JMenuItem mntmEstabelecimentoAdicionar = new JMenuItem("Adicionar");
+			mntmEstabelecimentoAdicionar.addActionListener(new ActionListener() {
+			    public void actionPerformed(ActionEvent e) {
+				if (ControleDeAcesso.empresarioEAdministrador())
+				    ChamarTelas.abrir(new TelaCadastroEstabelecimento());
+			    }
+			});
+			mntmEstabelecimentoAdicionar.setFont(new Font("Arial", Font.PLAIN, 12));
+			mntmEstabelecimentoAdicionar.setIcon(new ImageIcon(Home.class.getResource("/img/Create.png")));
+			mnEstabelecimento.add(mntmEstabelecimentoAdicionar);
+			
+				JMenuItem mntmEstabelecimentoEditar = new JMenuItem("Editar");
+				mntmEstabelecimentoEditar.addActionListener(new ActionListener() {
+				    public void actionPerformed(ActionEvent e) {
+					if (ControleDeAcesso.empresarioEAdministrador())
+					    ChamarTelas.abrir(new TelaEditarEstabelecimento());
 
-	JMenu mnUsuario = new JMenu("Usu\u00E1rio");
-	mnUsuario.setFont(new Font("Arial", Font.PLAIN, 12));
-	mnUsuario.setIcon(new ImageIcon(Home.class.getResource("/img/People.png")));
-	mnNewMenu_1.add(mnUsuario);
-
-	JMenuItem mntmUsuarioAdicionar = new JMenuItem("Adicionar");
-	mntmUsuarioAdicionar.addActionListener(new ActionListener() {
-	    public void actionPerformed(ActionEvent e) {
-		if (ControleDeAcesso.administrador())
-		    ChamarTelas.abrir(new TelaCadastroUsuario());
-	    }
-	});
-	mntmUsuarioAdicionar.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmUsuarioAdicionar.setIcon(new ImageIcon(Home.class.getResource("/img/Create.png")));
-	mnUsuario.add(mntmUsuarioAdicionar);
-
-	JMenuItem mntmUsuarioEditar = new JMenuItem("Editar");
-	mntmUsuarioEditar.addActionListener(new ActionListener() {
-	    public void actionPerformed(ActionEvent e) {
-		if (ControleDeAcesso.administrador())
-		    ChamarTelas.abrir(new TelaEditarUsuario());
-	    }
-	});
-	mntmUsuarioEditar.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmUsuarioEditar.setIcon(new ImageIcon(Home.class.getResource("/img/Redo.png")));
-	mnUsuario.add(mntmUsuarioEditar);
-
-	JMenuItem mntmUsuarioExcluir = new JMenuItem("Excluir");
-	mntmUsuarioExcluir.addActionListener(new ActionListener() {
-	    public void actionPerformed(ActionEvent e) {
-		if (ControleDeAcesso.administrador())
-		    ChamarTelas.abrir(new TelaExcluirUsuario());
-	    }
-	});
-	mntmUsuarioExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
-	mntmUsuarioExcluir.setIcon(new ImageIcon(Home.class.getResource("/img/Delete.png")));
-	mnUsuario.add(mntmUsuarioExcluir);
+				    }
+				});
+				mntmEstabelecimentoEditar.setFont(new Font("Arial", Font.PLAIN, 12));
+				mntmEstabelecimentoEditar.setIcon(new ImageIcon(Home.class.getResource("/img/Redo.png")));
+				mnEstabelecimento.add(mntmEstabelecimentoEditar);
+				
+					JMenuItem mntmEstabelecimentoExcluir = new JMenuItem("Excluir");
+					mntmEstabelecimentoExcluir.addActionListener(new ActionListener() {
+					    public void actionPerformed(ActionEvent e) {
+						if (ControleDeAcesso.administrador())
+						    ChamarTelas.abrir(new TelaExcluirEstabelecimento());
+					    }
+					});
+					mntmEstabelecimentoExcluir.setFont(new Font("Arial", Font.PLAIN, 12));
+					mntmEstabelecimentoExcluir.setIcon(new ImageIcon(Home.class.getResource("/img/Company.png")));
+					mnEstabelecimento.add(mntmEstabelecimentoExcluir);
 
 	JMenu mnNewMenu_2 = new JMenu("Relat\u00F3rio");
 	mnNewMenu_2.setFont(new Font("Arial", Font.PLAIN, 12));
