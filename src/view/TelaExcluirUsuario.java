@@ -195,6 +195,12 @@ public class TelaExcluirUsuario extends JFrame {
 	    
 		UsuarioDao.excluirDados(usuarioBean.getIdUsuario());
 		ManagerExcluirUsuario.limparDados(usuarioBean, textField_Nome, textField_Nome_completo, textField_Dt_nascimento, passSenha, comboBox_Perfil, comboBox_Sexo);
+		usuarioBean.setNome(textField_Nome.getText());
+		usuarioBean.setSenha(passSenha.getText());
+		usuarioBean.setPerfil_Usuario_idPerfil_Usuario(comboBox_Perfil.getSelectedIndex());
+		usuarioBean.setDt_nascimento(textField_Dt_nascimento.getText());
+		usuarioBean.setSexo_idSexo(comboBox_Sexo.getSelectedIndex());
+		usuarioBean.setNomeCompleto(textField_Nome_completo.getText());
 	    }
 	});
 	btnExcluir.setBounds(190, 345, 106, 23);
