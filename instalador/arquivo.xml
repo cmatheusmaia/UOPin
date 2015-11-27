@@ -2,8 +2,8 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
-  <jar>C:\Users\C Matheus Maia\Google Drive\PIN\PIN2015.jar</jar>
-  <outfile>C:\Users\C Matheus Maia\Google Drive\PIN\UniforMobile.exe</outfile>
+  <jar>C:\Users\C Matheus Maia\Google Drive\PIN\exe\PIN2015.jar</jar>
+  <outfile>C:\Users\C Matheus Maia\Google Drive\PIN\exe\UNIFORMOBILE.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
