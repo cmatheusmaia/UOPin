@@ -47,6 +47,7 @@ public class TelaRelUsuariosCadastros extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaRelUsuariosCadastros() {
+		setResizable(false);
 		setTitle("RELAT\u00D3RIO DE USU\u00C1RIOS CADASTRADOS - 1.0.1");
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
@@ -76,5 +77,10 @@ public class TelaRelUsuariosCadastros extends JFrame {
 		label.setFont(new Font("Arial", Font.PLAIN, 10));
 		label.setBounds(226, 427, 231, 23);
 		contentPane.add(label);
+		
+		JLabel label_1 = new JLabel("");
+		label_1.setIcon(new ImageIcon(TelaRelUsuariosCadastros.class.getResource("/img/erro_descontinuada.jpg")));
+		label_1.setBounds(10, 23, 432, 290);
+		contentPane.add(label_1);
 	}
 }
