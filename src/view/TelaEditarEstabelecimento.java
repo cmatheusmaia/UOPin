@@ -9,6 +9,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.SystemColor;
 import dao.InseriEstabelecimento;
+import negocio.ChamarTelas;
+import negocio.ControleDeAcesso;
 import sistema.bean.EstabelecimentoBean;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -204,6 +206,12 @@ public class TelaEditarEstabelecimento extends JFrame {
 	menuBar.add(menu);
 
 	JMenuItem menuItem = new JMenuItem("O que mudou?");
+	menuItem.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent arg0) {
+			if (ControleDeAcesso.administrador())
+			    ChamarTelas.abrir(new TelaSobreSistema());
+		}
+	});
 	menu.add(menuItem);
     }
 }
