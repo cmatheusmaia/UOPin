@@ -7,12 +7,20 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import negocio.ChamarTelas;
+import negocio.ControleDeAcesso;
 import negocio.PadroesDeTelas;
 
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.SystemColor;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.ImageIcon;
+import javax.swing.JMenuItem;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaRelUsuariosCadastros extends JFrame {
 
@@ -46,11 +54,27 @@ public class TelaRelUsuariosCadastros extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 442, 23);
+		contentPane.add(menuBar);
+		
+		JMenu mnAjuda = new JMenu("Ajuda");
+		mnAjuda.setIcon(new ImageIcon(TelaRelUsuariosCadastros.class.getResource("/img/Info.png")));
+		menuBar.add(mnAjuda);
+		
+		JMenuItem mntmOQueMudou = new JMenuItem("O que mudou?");
+		mntmOQueMudou.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (ControleDeAcesso.administrador())
+				    ChamarTelas.abrir(new TelaSobreSistema());
+			}
+		});
+		mnAjuda.add(mntmOQueMudou);
+		
 		JLabel label = new JLabel("VERS\u00C3O DO SISTEMA 1.0.1 - BUILDER 2015");
 		label.setForeground(SystemColor.controlShadow);
 		label.setFont(new Font("Arial", Font.PLAIN, 10));
 		label.setBounds(226, 427, 231, 23);
 		contentPane.add(label);
 	}
-
 }

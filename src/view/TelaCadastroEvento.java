@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import negocio.ChamarTelas;
+import negocio.ControleDeAcesso;
 import negocio.PadroesDeTelas;
 
 import java.awt.Color;
@@ -28,6 +31,8 @@ import java.awt.Canvas;
 import javax.swing.JTextPane;
 import javax.swing.JEditorPane;
 import javax.swing.JFormattedTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaCadastroEvento extends JFrame {
 
@@ -71,6 +76,12 @@ public class TelaCadastroEvento extends JFrame {
 	menuBar.add(mnNewMenu);
 	
 	JMenuItem mntmNewMenuItem = new JMenuItem("O que mudou?");
+	mntmNewMenuItem.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent arg0) {
+			if (ControleDeAcesso.administrador())
+			    ChamarTelas.abrir(new TelaSobreSistema());
+		}
+	});
 	mnNewMenu.add(mntmNewMenuItem);
 	contentPane = new JPanel();
 	contentPane.setBackground(Color.WHITE);

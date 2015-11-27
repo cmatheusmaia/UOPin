@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import negocio.ChamarTelas;
+import negocio.ControleDeAcesso;
 import negocio.ManagerCadastroUsuario;
 import negocio.PadroesDeTelas;
 
@@ -75,6 +76,12 @@ public class TelaCadastroUsuario extends JFrame {
 	menuBar.add(mnNewMenu);
 
 	JMenuItem mntmNewMenuItem = new JMenuItem("O que mudou?");
+	mntmNewMenuItem.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			if (ControleDeAcesso.administrador())
+			    ChamarTelas.abrir(new TelaSobreSistema());
+		}
+	});
 	mnNewMenu.add(mntmNewMenuItem);
 	contentPane = new JPanel();
 	contentPane.setBackground(Color.WHITE);

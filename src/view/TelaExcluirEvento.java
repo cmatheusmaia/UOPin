@@ -7,12 +7,20 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import negocio.ChamarTelas;
+import negocio.ControleDeAcesso;
 import negocio.PadroesDeTelas;
 
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.SystemColor;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaExcluirEvento extends JFrame {
 
@@ -40,6 +48,22 @@ public class TelaExcluirEvento extends JFrame {
 	 */
 	public TelaExcluirEvento() {
 		setTitle("EXCLUIR EVENTO - 1.0.1");
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("Ajuda");
+		mnNewMenu.setIcon(new ImageIcon(TelaExcluirEvento.class.getResource("/img/Info.png")));
+		menuBar.add(mnNewMenu);
+		
+		JMenuItem mntmOQueMudou = new JMenuItem("O que mudou?");
+		mntmOQueMudou.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (ControleDeAcesso.administrador())
+				    ChamarTelas.abrir(new TelaSobreSistema());
+			}
+		});
+		mnNewMenu.add(mntmOQueMudou);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

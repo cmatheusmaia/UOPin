@@ -16,6 +16,8 @@ import javax.swing.border.EmptyBorder;
 import dao.ConexaoBanco;
 import dao.InseriEstabelecimento;
 import dao.UsuarioDao;
+import negocio.ChamarTelas;
+import negocio.ControleDeAcesso;
 import negocio.ManagerEditarUsuario;
 import negocio.PadroesDeTelas;
 import sistema.bean.UsuarioBean;
@@ -79,6 +81,12 @@ public class TelaEditarUsuario extends JFrame {
 	menuBar.add(mnNewMenu);
 
 	JMenuItem mntmNewMenuItem = new JMenuItem("O que mudou?");
+	mntmNewMenuItem.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			if (ControleDeAcesso.administrador())
+			    ChamarTelas.abrir(new TelaSobreSistema());
+		}
+	});
 	mnNewMenu.add(mntmNewMenuItem);
 	contentPane = new JPanel();
 	contentPane.setBackground(Color.WHITE);
