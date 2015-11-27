@@ -38,14 +38,14 @@ import java.sql.Statement;
 public class TelaEditarUsuario extends JFrame {
 
     private JPanel contentPane;
-    public static JTextField textField_Nome;
-    public static JTextField textField_Nome_completo;
-    public static JTextField textField_Dt_nascimento;
-    public static JPasswordField passSenha;
-    public static int perfil;
-    public static int sexo;
-    public static UsuarioBean usuarioBean = new UsuarioBean();
-    public static UsuarioDao usuarioDao = new UsuarioDao();
+    private static JTextField textField_Nome;
+    private static JTextField textField_Nome_completo;
+    private static JTextField textField_Dt_nascimento;
+    private static JPasswordField passSenha;
+    private static int perfil;
+    private static int sexo;
+    private static UsuarioBean usuarioBean = new UsuarioBean();
+    private static UsuarioDao usuarioDao = new UsuarioDao();
 
     /**
      * Launch the application.
@@ -198,6 +198,13 @@ public class TelaEditarUsuario extends JFrame {
 	btnAlterar.setEnabled(false);
 	btnAlterar.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent arg0) {
+		usuarioBean.setNome(textField_Nome.getText());
+		usuarioBean.setSenha(passSenha.getText());
+		usuarioBean.setPerfil_Usuario_idPerfil_Usuario(comboBox_Perfil.getSelectedIndex());
+		usuarioBean.setDt_nascimento(textField_Dt_nascimento.getText());
+		usuarioBean.setSexo_idSexo(comboBox_Sexo.getSelectedIndex());
+		usuarioBean.setNomeCompleto(textField_Nome_completo.getText());
+	    
 		usuarioDao.atualizarDados(usuarioBean);
 	    }
 	});
