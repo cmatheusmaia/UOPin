@@ -11,15 +11,14 @@ import sistema.bean.EstabelecimentoBean;
 
 public class InseriEstabelecimento {
 
-    public static void InsereDados(String nome, String cnpj, String telefone, String ramodeatividade,
-	    String endereconocampus, String proprietario, String horariodefuncionamento) {
+    public static void InsereDados(String Nome, String Cnpj, String Telefone, String Ramodeatividade,
+	    String Endereconocampus, String Proprietario, String HorarioDeFuncionamento) {
 	ConexaoBanco uniformobile = new ConexaoBanco();
 	try {
 	    Connection ExConn = (Connection) uniformobile.getConnection();
 	    Statement stmt = (Statement) ExConn.createStatement();
-	    String sSQL = "INSERT INTO uniformobile.estabelecimento VALUES ('" + nome + "','" + cnpj + "','" + telefone
-		    + "','" + ramodeatividade + "','" + endereconocampus + "','" + proprietario + "','"
-		    + horariodefuncionamento + "');";
+	    String sSQL = "INSERT INTO `uniformobile`.`estabelecimento`(`Nome`,`Cnpj`,`Telefone`,`ramodeatividade`,`endereconocampus`,`proprietario`,`horariodefuncionamento`)"
+		    + "VALUES (' Nome  ','  Cnpj ','  Telefone ','  Ramodeatividade ','  Endereconocampus ','  Proprietario ','  HorarioDeFuncionamento  ');";
 	    System.out.println(sSQL);
 	    boolean res = stmt.execute(sSQL);
 
@@ -32,7 +31,7 @@ public class InseriEstabelecimento {
 	}
     }
 
-    public static void ExcluirEstabelecimento(int codigo) {
+    public static void ExcluirEstabelecimento(int codigo) { 
 	ConexaoBanco uniformobile = new ConexaoBanco();
 
 	try {
