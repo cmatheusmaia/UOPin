@@ -94,5 +94,22 @@ public class UsuarioDao {
 	}
 
     }
+    
+    public static void excluirDados(int codigo) {
+	ConexaoBanco uniformobile = new ConexaoBanco();
+	try {
+	    Connection ExConn = (Connection) uniformobile.getConnection();
+	    Statement stmt = (Statement) ExConn.createStatement();
+	    String sSQL = "DELETE FROM uniformobile.usuario WHERE idUsuario = " + codigo + ";";
+	    boolean rs = stmt.execute(sSQL);
+	    JOptionPane.showMessageDialog(null, (!rs) ? "Dados do estabelecimento excluidos com sucesso."
+		    : "Dados do estabelecimento não foram excluidos com sucesso.");
+
+	    stmt.close();
+	    uniformobile.fecharBDConn();
+	} catch (Exception e) {
+	    JOptionPane.showMessageDialog(null, "Os dados não foram encontrados!!!");
+	}
+    }
 
 }

@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.DefaultComboBoxModel;
@@ -16,8 +15,6 @@ import javax.swing.border.EmptyBorder;
 import dao.ConexaoBanco;
 import dao.InseriEstabelecimento;
 import dao.UsuarioDao;
-import negocio.ChamarTelas;
-import negocio.ControleDeAcesso;
 import negocio.ManagerEditarUsuario;
 import negocio.PadroesDeTelas;
 import sistema.bean.UsuarioBean;
@@ -44,8 +41,6 @@ public class TelaEditarUsuario extends JFrame {
     private static JTextField textField_Nome_completo;
     private static JTextField textField_Dt_nascimento;
     private static JPasswordField passSenha;
-    private static int perfil;
-    private static int sexo;
     private static UsuarioBean usuarioBean = new UsuarioBean();
     private static UsuarioDao usuarioDao = new UsuarioDao();
 
@@ -81,12 +76,6 @@ public class TelaEditarUsuario extends JFrame {
 	menuBar.add(mnNewMenu);
 
 	JMenuItem mntmNewMenuItem = new JMenuItem("O que mudou?");
-	mntmNewMenuItem.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			if (ControleDeAcesso.administrador())
-			    ChamarTelas.abrir(new TelaSobreSistema());
-		}
-	});
 	mnNewMenu.add(mntmNewMenuItem);
 	contentPane = new JPanel();
 	contentPane.setBackground(Color.WHITE);
@@ -190,13 +179,7 @@ public class TelaEditarUsuario extends JFrame {
 	btnLimpar.setEnabled(false);
 	btnLimpar.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent arg0) {
-		textField_Nome.setText("");
-		textField_Nome_completo.setText("");
-		textField_Dt_nascimento.setText("");
-		passSenha.setText("");
-		comboBox_Perfil.setSelectedIndex(0);
-		comboBox_Sexo.setSelectedIndex(0);
-
+		ManagerEditarUsuario.limparDados(usuarioBean, textField_Nome, textField_Nome_completo, textField_Dt_nascimento, passSenha, comboBox_Perfil, comboBox_Sexo);
 	    }
 	});
 	btnLimpar.setBounds(380, 345, 106, 23);
@@ -212,8 +195,9 @@ public class TelaEditarUsuario extends JFrame {
 		usuarioBean.setDt_nascimento(textField_Dt_nascimento.getText());
 		usuarioBean.setSexo_idSexo(comboBox_Sexo.getSelectedIndex());
 		usuarioBean.setNomeCompleto(textField_Nome_completo.getText());
-	    
+		
 		usuarioDao.atualizarDados(usuarioBean);
+		ManagerEditarUsuario.limparDados(usuarioBean, textField_Nome, textField_Nome_completo, textField_Dt_nascimento, passSenha, comboBox_Perfil, comboBox_Sexo);
 	    }
 	});
 	btnAlterar.setBounds(190, 345, 106, 23);
