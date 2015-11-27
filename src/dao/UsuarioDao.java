@@ -102,8 +102,8 @@ public class UsuarioDao {
 	    Statement stmt = (Statement) ExConn.createStatement();
 	    String sSQL = "DELETE FROM uniformobile.usuario WHERE idUsuario = " + codigo + ";";
 	    boolean rs = stmt.execute(sSQL);
-	    JOptionPane.showMessageDialog(null, (!rs) ? "Dados do estabelecimento excluidos com sucesso."
-		    : "Dados do estabelecimento não foram excluidos com sucesso.");
+	    JOptionPane.showMessageDialog(null, (!rs) ? "Dados do usuario excluidos com sucesso."
+		    : "Dados do usuario não foram excluidos com sucesso.");
 
 	    stmt.close();
 	    uniformobile.fecharBDConn();
