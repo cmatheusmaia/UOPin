@@ -12,7 +12,8 @@ import java.awt.SystemColor;
 import dao.InseriEstabelecimento;
 import negocio.ChamarTelas;
 import negocio.ControleDeAcesso;
-
+import negocio.ManagerExcluirEstabelecimento;
+import sistema.bean.EstabelecimentoBean;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -29,6 +30,8 @@ public class TelaExcluirEstabelecimento extends JFrame {
      * 
      */
     private static final long serialVersionUID = 1L;
+	protected static final EstabelecimentoBean EstBin = null;
+	protected static final JButton btnLimpar = null;
     private JPanel contentPane;
     private JTextField jtfNome;
     private JTextField jtfCnpj;
@@ -37,6 +40,9 @@ public class TelaExcluirEstabelecimento extends JFrame {
     private JTextField jtfEnderecoNoCampus;
     private JTextField jtfProprietario;
     private JTextField jtfHorarioDeFuncionamento;
+	protected EstabelecimentoBean estabelecimentobean;
+	protected InseriEstabelecimento insereEstabelecimento;
+
 
     /**
      * Launch the application.
@@ -167,13 +173,62 @@ public class TelaExcluirEstabelecimento extends JFrame {
 	JButton btnExcluirCadastro = new JButton("EXCLUIR CADASTRO");
 	btnExcluirCadastro.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent arg0) {
-		int codigo = Integer
-			.parseInt(JOptionPane.showInputDialog(null, "Digite o codigo do Estabelecimento: "));
-		InseriEstabelecimento.ExcluirEstabelecimento(codigo);
-	    }
-	});
-	btnExcluirCadastro.setBounds(289, 335, 179, 23);
+			estabelecimentobean.setNome(jtfNome.getText());
+	    	estabelecimentobean.setCnpj(jtfCnpj.getText());
+	    	estabelecimentobean.setTelefone(jtfTelefone.getText());
+	    	estabelecimentobean.setRamodeatividade(jtfRamoDeAtividade.getText());
+	    	estabelecimentobean.setEndereconocampus(jtfEnderecoNoCampus.getText());
+	    	estabelecimentobean.setProprietario(jtfProprietario.getText());
+	    	estabelecimentobean.setHorariodefuncionamento(jtfHorarioDeFuncionamento.getText());
+	    	
+	    	EstabelecimentoBean.excluirDadosEst(estabelecimentobean.getIdEstabelecimento());
+	    	ManagerExcluirEstabelecimento.limparDadosEst(estabelecimentobean, jtfNome, jtfCnpj, jtfTelefone, jtfRamoDeAtividade,
+					jtfEnderecoNoCampus, jtfProprietario, jtfHorarioDeFuncionamento);
+			estabelecimentobean=null;
+		    }
+		});
+	btnExcluirCadastro.setBounds(183, 335, 179, 23);
 	contentPane.add(btnExcluirCadastro);
-    }
+	
+	JButton btnBuscar = new JButton("BUSCAR");
+	btnBuscar.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			String nomeEstabelecimento = JOptionPane.showInputDialog(null, "Digite o nome do estabelecimento ");
+			InseriEstabelecimento.BuscarDados(nomeEstabelecimento, EstBin);
+			jtfNome.setText(EstBin.getNome());
+			jtfCnpj.setText(EstBin.getCnpj());
+			jtfTelefone.setText(EstBin.getTelefone());
+			jtfRamoDeAtividade.setText(EstBin.getRamodeatividade());
+			jtfEnderecoNoCampus.setText(EstBin.getEndereconocampus());
+			jtfProprietario.setText(EstBin.getProprietario());
+			jtfHorarioDeFuncionamento.setText(EstBin.getHorariodefuncionamento());
+		    }
+	});
 
+	btnBuscar.setBounds(300, 24, 106, 23);
+	contentPane.add(btnBuscar);
+	
+	JLabel lblSelecionarEstabelecimento = new JLabel("Selecionar Estabelecimento:");
+	lblSelecionarEstabelecimento.setForeground(SystemColor.controlDkShadow);
+	lblSelecionarEstabelecimento.setFont(new Font("Arial", Font.PLAIN, 11));
+	lblSelecionarEstabelecimento.setBounds(141, 24, 136, 23);
+	contentPane.add(lblSelecionarEstabelecimento);
+	
+	JButton btnLimpar = new JButton("LIMPAR");
+	btnLimpar.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent arg0) {
+			jtfNome.setText("");
+			jtfCnpj.setText("");
+			jtfTelefone.setText("");
+			jtfRamoDeAtividade.setText("");
+			jtfEnderecoNoCampus.setText("");
+			jtfProprietario.setText("");
+			jtfHorarioDeFuncionamento.setText("");
+
+		    }
+
+	});
+	btnLimpar.setBounds(400, 335, 106, 23);
+	contentPane.add(btnLimpar);
+    }
 }

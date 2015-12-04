@@ -25,6 +25,7 @@ import javax.swing.JButton;
 public class TelaEditarEstabelecimento extends JFrame {
 
     private static final long serialVersionUID = 1L;
+	protected static final EstabelecimentoBean EstabelecimentoBean = null;
     private JPanel contentPane;
     private JTextField jtfNome;
     private JTextField jtfCnpj;
@@ -183,9 +184,8 @@ public class TelaEditarEstabelecimento extends JFrame {
 	JButton btnBuscar = new JButton("BUSCAR");
 	btnBuscar.addActionListener(new ActionListener() {
 	    public void actionPerformed(ActionEvent arg0) {
-		int codigo = Integer
-			.parseInt(JOptionPane.showInputDialog(null, "Digite o codigo do Estabelecimento: "));
-		InseriEstabelecimento.BuscarDados(codigo, EstBin);
+		String nomeEstabelecimento = JOptionPane.showInputDialog(null, "Digite o nome do estabelecimento ");
+		InseriEstabelecimento.BuscarDados(nomeEstabelecimento, EstBin);
 		jtfNome.setText(EstBin.getNome());
 		jtfCnpj.setText(EstBin.getCnpj());
 		jtfTelefone.setText(EstBin.getTelefone());

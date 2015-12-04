@@ -18,7 +18,7 @@ public class InseriEstabelecimento {
 	    Connection ExConn = (Connection) uniformobile.getConnection();
 	    Statement stmt = (Statement) ExConn.createStatement();
 	    String sSQL = "INSERT INTO `uniformobile`.`estabelecimento`(`Nome`,`Cnpj`,`Telefone`,`ramodeatividade`,`endereconocampus`,`proprietario`,`horariodefuncionamento`)"
-		    + "VALUES (' Nome  ','  Cnpj ','  Telefone ','  Ramodeatividade ','  Endereconocampus ','  Proprietario ','  HorarioDeFuncionamento  ');";
+		    + "VALUES ('" + Nome + "','" +  Cnpj + "','" +  Telefone + "','" +  Ramodeatividade + "','" +  Endereconocampus + "','" +  Proprietario + "','" +  HorarioDeFuncionamento  + "');";
 	    System.out.println(sSQL);
 	    boolean res = stmt.execute(sSQL);
 
@@ -74,14 +74,14 @@ public class InseriEstabelecimento {
 	return retorno;
     }
 
-    public static int BuscarDados(int codigo, EstabelecimentoBean EstBin) {
+    public static String BuscarDados(String nomeEstabelecimento, EstabelecimentoBean EstBin) {
 	ConexaoBanco uniformobile = new ConexaoBanco();
 
 	try {
 	    // BUSCAR DADOS
 	    Connection ExConn = (Connection) uniformobile.getConnection();
 	    Statement stmt = (Statement) ExConn.createStatement();
-	    String sSQL = "SELECT * FROM uniformobile.Estabelecimento WHERE idEstabelecimento = " + codigo;
+	    String sSQL = "SELECT * FROM `uniformobile`.`estabelecimento` WHERE `Nome` = '" + nomeEstabelecimento +"'";
 	    ResultSet rs = stmt.executeQuery(sSQL);
 
 	    while (rs.next()) {
@@ -99,7 +99,12 @@ public class InseriEstabelecimento {
 	} catch (Exception e) {
 	    JOptionPane.showMessageDialog(null, "Os dados não puderam ser encontrado!!!");
 	}
-	return codigo;
+	return nomeEstabelecimento;
 
     }
+
+	public static void BuscarDados1(String nomeEstabelecimento, sistema.bean.EstabelecimentoBean estabelecimentobean) {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -1,5 +1,7 @@
 package sistema.bean;
 
+import javax.swing.JTextField;
+
 public class EstabelecimentoBean {
 
     private String nome;
@@ -76,4 +78,23 @@ public class EstabelecimentoBean {
 	this.codigo = codigo;
     }
 
-}
+	public Object getIdEstabelecimento() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static void excluirDadosEst(Object idEstabelecimento) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void BuscarDados(String nomeEstabelecimento, EstabelecimentoBean estabelecimentobean) {
+		// TODO Auto-generated method stub
+		
+	}
+
+		// TODO Auto-generated method stub
+		
+	}
+
+
