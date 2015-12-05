@@ -14,7 +14,7 @@ import view.*;
 public class ChamarTelas {
 
     public static void abrir(JFrame tela) {
-	JOptionPane.showMessageDialog(null, "Carregando rotina");
+//	JOptionPane.showMessageDialog(null, "Carregando rotina");
 
 	// Responsável para chamar rotinas de: Cadastro;
 
